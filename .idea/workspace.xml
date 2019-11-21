@@ -2,20 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f6e1ec-e98e-4ac3-9e4a-6c8899061316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ckeditor5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-BLACK.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-BLACKITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-BOLD.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-BOLDCONDENSED.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-BOLDITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-CONDENSED.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-ITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-LIGHT.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-LIGHTITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-MEDIUM.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-MEDIUMITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-REGULAR.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-THIN.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/Roboto/ROBOTO-THINITALIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB45.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB46.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB47.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB55.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB56.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB57.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB65.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB66.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB67.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB75.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB76.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB77.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB95.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB96.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/VTB/VTB97.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/fontawesome/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/fontawesome/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/fontawesome/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/remove-duplicates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-table/src/commands/setbordercommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ckeditor5-table/theme/icons/table-border.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-adapter-ckfinder/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-adapter-ckfinder/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-adapter-ckfinder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-adapter-ckfinder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-alignment/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-alignment/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-alignment/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-alignment/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-autoformat/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-autoformat/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-autoformat/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-autoformat/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-autosave/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-autosave/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-autosave/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-autosave/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-basic-styles/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-basic-styles/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-basic-styles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-basic-styles/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-block-quote/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-block-quote/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-block-quote/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-block-quote/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/node_modules/@ckeditor/ckeditor5-theme-lark/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/node_modules/@ckeditor/ckeditor5-theme-lark/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/node_modules/@ckeditor/ckeditor5-theme-lark/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/node_modules/@ckeditor/ckeditor5-theme-lark/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-balloon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-balloon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/translations/ar.js" beforeDir="false" />
@@ -74,247 +129,158 @@
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/translations/zh.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ie11-polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ie11-polyfills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/node_modules/@ckeditor/ckeditor5-theme-lark/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/node_modules/@ckeditor/ckeditor5-theme-lark/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/node_modules/@ckeditor/ckeditor5-theme-lark/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/node_modules/@ckeditor/ckeditor5-theme-lark/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-inline/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-inline/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-build-inline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-build-inline/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-ckfinder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-ckfinder/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-clipboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-clipboard/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboardobserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboardobserver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/datatransfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/datatransfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-cloud-services/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-cloud-services/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-cloud-services/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-cloud-services/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-core/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-core/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-core/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/src/uploadadapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder/src/uploadadapter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-easy-image/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-easy-image/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-easy-image/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-easy-image/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-balloon/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-balloon/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-balloon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-balloon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-classic/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-classic/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-classic/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-classic/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-decoupled/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-decoupled/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-decoupled/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-decoupled/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-inline/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-inline/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-editor-inline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-editor-inline/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-engine/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-engine/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-engine/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-engine/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-enter/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-enter/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-enter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-enter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-essentials/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-essentials/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-essentials/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-essentials/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-font/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-font/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-font/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-font/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-heading/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-heading/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-heading/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-heading/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-highlight/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-highlight/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-highlight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-highlight/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-image/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-image/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-image/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-image/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-line-height/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-line-height/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-line-height/src/lineheightediting.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-line-height/src/lineheightediting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-line-height/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-line-height/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/lang/translations/ru.po" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/lang/translations/ru.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkcommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkcommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkediting.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkediting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkui.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/linkui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/theme/icons/upload.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/theme/icons/upload.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/ui/linkformview.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/ui/linkformview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/theme/link.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/theme/link.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-link/theme/linkform.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-link/theme/linkform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-list/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-list/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-markdown-gfm/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-markdown-gfm/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-markdown-gfm/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-markdown-gfm/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-media-embed/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-media-embed/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-media-embed/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-media-embed/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-mention/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-mention/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-mention/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-mention/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-paragraph/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-paragraph/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-paragraph/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-paragraph/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-paste-from-office/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-paste-from-office/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-paste-from-office/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-paste-from-office/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-remove-format/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-remove-format/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-remove-format/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-remove-format/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/lang/translations/en.po" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/lang/translations/en.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/lang/translations/ru.po" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/lang/translations/ru.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/src/converters/downcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/src/converters/downcast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableediting.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableediting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableui.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableutils.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/src/tableutils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-table/theme/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-table/theme/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-theme-lark/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-theme-lark/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-theme-lark/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-theme-lark/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-typing/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-typing/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-typing/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-typing/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-ui/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-ui/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-ui/src/inputtext/inputtextview.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-ui/src/inputtext/inputtextview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-undo/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-undo/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-undo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-undo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-upload/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-upload/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-upload/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-upload/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-utils/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-utils/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ckeditor5-widget/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-widget/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/ckeditor5-widget/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ckeditor5-widget/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ckeditor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding>
-                <element signature="e#211#296#0" expanded="true" />
-                <element signature="e#1274#1327#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/browserslist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="79" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mgit.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>_startUpdatingUI</find>
-      <find>image-style-side</find>
-      <find>UglifyJsWebpackPlugin</find>
-      <find>defaultStyles</find>
-      <find>_normalizeStyle</find>
-      <find>configuredStyles</find>
-      <find>normalizeImageStyles</find>
-      <find>&quot;@ckeditor/ckeditor5-build-classic&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-build-decoupled-document&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-build-inline&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-ckfinder&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-ckfinder&quot;: &quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-clipboard&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-easy-image&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-core&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-build-classic&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-clipboard&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-engine&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-utils&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-widget&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>&quot;@ckeditor/ckeditor5-table&quot;: &quot;\^[0-9.]+&quot;</find>
-      <find>@ckeditor/ckeditor5-talbe</find>
-      <find>&quot;@ckeditor/ckeditor5-table&quot;&quot;</find>
-      <find>@ckeditor/ckeditor5-table&quot;</find>
-      <find>&quot;&quot;@ckeditor/ckeditor5-table&quot;:</find>
-      <find>&quot;@ckeditor/ckeditor5-table&quot;:</find>
-      <find>scrollX and scrollY mustn't be a function</find>
-      <find>Offset</find>
-      <find>scrollY</find>
-      <find>scrollY</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&quot;@ckeditor/ckeditor5-utils&quot;: &quot;^12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-ui&quot;: &quot;^12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-table&quot;: &quot;^12.0.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-table&quot;: &quot;^12.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-media-embed&quot;: &quot;^11.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-engine&quot;: &quot;^13.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-block-quote&quot;: &quot;^11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-core&quot;: &quot;^12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-ckfinder&quot;: &quot;^11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-clipboard&quot;: &quot;^11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-easy-image&quot;: &quot;11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-core&quot;: &quot;12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-build-classic&quot;: &quot;12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-clipboard&quot;: &quot;11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-engine&quot;: &quot;13.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-utils&quot;: &quot;12.1.0&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-widget&quot;: &quot;11.0.1&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-talbe&quot;: &quot;12.0.1&quot;</replace>
-      <replace>@ckeditor/ckeditor5-table&quot;</replace>
-      <replace>&quot;@ckeditor/ckeditor5-table&quot;</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/node_modules/core-js</dir>
-      <dir>$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-engine/src/conversion</dir>
-      <dir>$PROJECT_DIR$/node_modules/ckeditor5-line-height</dir>
-      <dir>$PROJECT_DIR$/packages/ckeditor5-image</dir>
-      <dir>$PROJECT_DIR$/packages/</dir>
-      <dir>$PROJECT_DIR$/node_modules</dir>
-    </dirStrings>
+  <component name="FavoritesManager">
+    <favorites_list name="ckeditor5" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/packages/ckeditor5-build-classic" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/packages/ckeditor5-image/package.json" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-mention/package.json" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/datatransfer.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-paste-from-office/src/pastefromoffice.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-engine/src/view/observer/mutationobserver.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboardobserver.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboard.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-build-classic/package.json" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js" />
-        <option value="$PROJECT_DIR$/node_modules/ckeditor5-line-height/package.json" />
-        <option value="$PROJECT_DIR$/.editorconfig" />
-        <option value="$PROJECT_DIR$/node_modules/ckeditor5-line-height/src/lineheightediting.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-ui/src/labeledinput/labeledinputview.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-media-embed/src/ui/mediaformview.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle/utils.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/mgit.json" />
-        <option value="$PROJECT_DIR$/node_modules/core-js/modules/_microtask.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-build-classic/browserslist" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.js" />
-        <option value="$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ckeditor.js" />
-      </list>
-    </option>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="36" />
-    <option name="width" value="1776" />
-    <option name="height" value="1093" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ckeditor5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ckeditor5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ckeditor5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ckeditor5" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ckeditor5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ckeditor5" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="ckeditor5-build-classic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ckeditor5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ckeditor5" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="ckeditor5-build-classic" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1QxWOEh80MvIguiP2RKzs8j6rzv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.8.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/fontawesome" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets/fonts/fontawesome" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-build-classic" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets" />
+      <recent name="$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-engine/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-build-classic/assets" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-link/theme" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-link/theme/icons" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-build-classic/src" />
+      <recent name="$PROJECT_DIR$/packages/ckeditor5-table/theme/icons" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,6 +294,32 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Node.js.webpack-dev-server.js">
+    <configuration name="remove-duplicates.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="remove-duplicates.js" working-dir="$PROJECT_DIR$/packages/ckeditor5-build-classic/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="rm duplicates" type="NodeJSConfigurationType" application-parameters="$PROJECT_DIR$/packages/ckeditor5-build-classic" path-to-js-file="src/remove-duplicates.js" working-dir="$PROJECT_DIR$/packages/ckeditor5-build-classic">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch.js">
+      <method v="2" />
+    </configuration>
+    <configuration name="webpack-dev-server.js" type="NodeJSConfigurationType" application-parameters="--mode development --config ./webpack.config.app.js" nameIsGenerated="true" path-to-js-file="node_modules/webpack-dev-server/bin/webpack-dev-server.js" working-dir="$PROJECT_DIR$/packages/ckeditor5-build-classic">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.webpack-dev-server.js" />
+      <item itemvalue="Node.js.rm duplicates" />
+      <item itemvalue="Node.js.scratch.js" />
+      <item itemvalue="Node.js.remove-duplicates.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.remove-duplicates.js" />
+        <item itemvalue="Node.js.scratch.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -350,372 +342,67 @@
       <workItem from="1564502893143" duration="897000" />
       <workItem from="1566219295073" duration="1881000" />
       <workItem from="1566225095534" duration="899000" />
-      <workItem from="1566286244218" duration="1933000" />
+      <workItem from="1566286244218" duration="27079000" />
+      <workItem from="1566377605169" duration="4964000" />
+      <workItem from="1566383588613" duration="10000" />
+      <workItem from="1566383924788" duration="5261000" />
+      <workItem from="1568712695044" duration="557000" />
+      <workItem from="1568714251542" duration="8458000" />
+      <workItem from="1568739636341" duration="1810000" />
+      <workItem from="1568805645717" duration="18402000" />
+      <workItem from="1568896521944" duration="5110000" />
+      <workItem from="1568921440168" duration="454000" />
+      <workItem from="1568973310639" duration="19502000" />
+      <workItem from="1570608253622" duration="20388000" />
+      <workItem from="1571319892001" duration="1704000" />
+      <workItem from="1571768363980" duration="35329000" />
+      <workItem from="1571910365992" duration="1410000" />
+      <workItem from="1571922317510" duration="1117000" />
+      <workItem from="1571923940948" duration="219000" />
+      <workItem from="1571924364636" duration="1037000" />
+      <workItem from="1572435320615" duration="4928000" />
+      <workItem from="1572951600276" duration="445000" />
+      <workItem from="1572962345536" duration="218000" />
+      <workItem from="1572963636107" duration="788000" />
+      <workItem from="1573033520823" duration="256000" />
+      <workItem from="1573067773824" duration="454000" />
+      <workItem from="1573128934567" duration="6056000" />
+      <workItem from="1573201184036" duration="14000" />
+      <workItem from="1573201242005" duration="620000" />
+      <workItem from="1573202983131" duration="72000" />
+      <workItem from="1573573636752" duration="873000" />
+      <workItem from="1573829443985" duration="119000" />
+      <workItem from="1573831497618" duration="1843000" />
+      <workItem from="1573840526398" duration="1581000" />
+      <workItem from="1573847727130" duration="2078000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27668000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="7" y="36" width="1776" height="1093" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28273463" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32967034" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Nativescript Palette" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-paste-from-office/src/filters/parse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-engine/src/view/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="490" column="4" selection-start-line="490" selection-start-column="4" selection-end-line="490" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-clipboard/src/clipboardobserver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="41" column="43" lean-forward="true" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-ui/src/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="266" column="50" selection-start-line="266" selection-start-column="50" selection-end-line="266" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-typing/src/utils/injecttypingmutationshandling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-engine/src/view/observer/mutationobserver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-engine/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/node_modules/@ckeditor/ckeditor5-engine/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-engine/src/conversion/upcasthelpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="161" column="22" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-engine/src/conversion/conversion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/node_modules/@ckeditor/ckeditor5-core/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-core/src/command.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/src/lineheightcommand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/src/lineheight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-core/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/src/lineheightui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ckeditor5-line-height/src/lineheightediting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="44" column="56" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-mention/docs/_snippets/features/mention-customization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret column="80432" selection-start-column="80432" selection-end-column="80432" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/core-js/modules/core.get-iterator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/core-js/modules/_for-of.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-utils/LICENSE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-utils/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-link/src/linkui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="452" column="13" lean-forward="true" selection-start-line="452" selection-start-column="13" selection-end-line="452" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_snippets/examples/classic-editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/build/ckeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="44375" column="36" selection-start-line="44375" selection-start-column="36" selection-end-line="44375" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/image.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/image/imageediting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-443" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/image/imageinsertcommand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/image/imageloadobserver.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="53" column="57" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagetextalternative/imagetextalternativeediting.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagetextalternative/imagetextalternativecommand.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle/imagestylecommand.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle/converters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle/imagestyleui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagetoolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/image/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagecaption.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-image/src/imagestyle/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="101" column="57" selection-start-line="101" selection-start-column="57" selection-end-line="101" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgit.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/core-js/modules/_microtask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ckeditor/ckeditor5-ui/src/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="442" column="32" lean-forward="true" selection-start-line="442" selection-start-column="32" selection-end-line="442" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/browserslist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="79" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/ckeditor5-build-classic/src/ckeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#211#296#0" expanded="true" />
-            <element signature="e#1274#1327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/ckeditor5-font/src/fontcommand.js</url>
+          <line>52</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

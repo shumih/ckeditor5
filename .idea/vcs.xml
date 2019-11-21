@@ -10,13 +10,16 @@
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-block-quote" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-balloon" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-balloon-block/node_modules/@ckeditor/ckeditor5-theme-lark" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-classic" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-decoupled-document/node_modules/@ckeditor/ckeditor5-theme-lark" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-build-inline" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-ckfinder" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-clipboard" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-cloud-services" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-custom-adapter-ckfinder" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-easy-image" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-editor-balloon" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-editor-classic" vcs="Git" />
@@ -29,6 +32,8 @@
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-heading" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-highlight" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-image" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-inline-adapter-ckfinder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-line-height" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-link" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-list" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-markdown-gfm" vcs="Git" />
@@ -44,6 +49,7 @@
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-undo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-upload" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-utils" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ckeditor5-video" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/ckeditor5-widget" vcs="Git" />
   </component>
 </project>
