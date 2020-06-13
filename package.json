@@ -64,7 +64,6 @@
     "@ckeditor/ckeditor5-upload": "file:./packages/ckeditor5-upload",
     "@ckeditor/ckeditor5-utils": "file:./packages/ckeditor5-utils",
     "@ckeditor/ckeditor5-widget": "file:./packages/ckeditor5-widget",
-    "@shumih/ckeditor-ie": "^19.0.3",
     "ckeditor5-custom-adapter-ckfinder": "file:./packages/ckeditor5-custom-adapter-ckfinder",
     "ckeditor5-video": "file:./packages/ckeditor5-video",
     "lodash-es": "^4.17.10"
@@ -104,11 +103,11 @@
   },
   "author": "CKSource (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://github.com/shumih/ckeditor-ie#readme",
-  "bugs": "https://github.com/shumih/ckeditor-ie/issues",
+  "homepage": "https://github.com/shumih/ckeditor5#readme",
+  "bugs": "https://github.com/shumih/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shumih/ckeditor-ie.git"
+    "url": "https://github.com/shumih/ckeditor5.git"
   },
   "scripts": {
     "test": "node --max_old_space_size=4096 node_modules/@ckeditor/ckeditor5-dev-tests/bin/test.js",
