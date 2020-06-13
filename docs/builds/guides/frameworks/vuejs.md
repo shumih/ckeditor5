@@ -21,7 +21,7 @@ Additionally, you can [integrate CKEditor 5 from source](#using-ckeditor-from-so
 
 ## Quick start
 
-Install the [CKEditor 5 WYSIWYG editor component for Vue.js](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue) and the {@link builds/guides/overview#available-builds editor build of your choice}.
+Install the [CKEditor 5 WYSIWYG editor component for Vue.js](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue) and the {@link builds/guides/overview#available-builds build of your choice}.
 
 Assuming that you picked [`@ckeditor/ckeditor5-build-classic`](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic):
 
@@ -265,10 +265,6 @@ module.exports = {
 };
 ```
 
-<info-box>
-    By default, the Vue CLI uses [`file-loader`](https://webpack.js.org/loaders/file-loader/) for all SVG files. The `file-loader` copies the file to the output directory and resolves imports into URLs. The CKEditor's UI components use SVG {@link module:ui/icon/iconview~IconView#content source directly} so the theme icons must be loaded using [`raw-loader`](https://webpack.js.org/loaders/raw-loader). If your project uses different approach then CKEditor's UI library you must create different webpack loader rules for your project SVG files and CKEditor's ones.
-</info-box>
-
 ### Using the editor from source
 
 Having configured `vue.config.js`, you can choose the building blocks of your editor. Install the packages necessary for your integration:
@@ -277,6 +273,7 @@ Having configured `vue.config.js`, you can choose the building blocks of your ed
 npm install --save \
 	@ckeditor/ckeditor5-editor-classic \
 	@ckeditor/ckeditor5-essentials \
+	@ckeditor/ckeditor5-basic-styles \
 	@ckeditor/ckeditor5-basic-styles \
 	@ckeditor/ckeditor5-link \
 	@ckeditor/ckeditor5-paragraph
@@ -515,7 +512,7 @@ Specifies the {@link module:core/editor/editorconfig~EditorConfig configuration}
 			return {
 				editor: ClassicEditor,
 				editorConfig: {
-					toolbar: [ 'bold', 'italic', '|', 'link' ]
+					toolbar: [ 'bold', 'italic', '|' 'link' ]
 				}
 			};
 		}

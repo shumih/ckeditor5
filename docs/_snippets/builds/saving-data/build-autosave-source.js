@@ -9,6 +9,6 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic/src/ckeditor';
 
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 
-ClassicEditor.builtinPlugins.push( Autosave );
+ClassicEditor.builtinPlugins.push(Autosave);
 
 window.ClassicEditor = ClassicEditor;

@@ -8,41 +8,40 @@
 import InlineEditor from '@ckeditor/ckeditor5-build-inline/src/ckeditor';
 import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config';
 
-const inlineInjectElements = document.querySelectorAll( '#snippet-inline-editor [data-inline-inject]' );
+const inlineInjectElements = document.querySelectorAll('#snippet-inline-editor [data-inline-inject]');
 
-Array.from( inlineInjectElements ).forEach( inlineElement => {
-	const config = {
-		image: {
-			toolbar: [ 'imageTextAlternative', '|', 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight' ],
-			styles: [ 'full', 'alignLeft', 'alignRight' ]
-		},
-		toolbar: {
-			viewportTopOffset: window.getViewportTopOffsetConfig()
-		},
-		cloudServices: CS_CONFIG
-	};
+Array.from(inlineInjectElements).forEach(inlineElement => {
+  const config = {
+    image: {
+      toolbar: ['imageTextAlternative', '|', 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight'],
+      styles: ['full', 'alignLeft', 'alignRight'],
+    },
+    toolbar: {
+      viewportTopOffset: window.getViewportTopOffsetConfig(),
+    },
+    cloudServices: CS_CONFIG,
+  };
 
-	if ( inlineElement.tagName.toLowerCase() == 'header' ) {
-		config.removePlugins = [
-			'Blockquote',
-			'Image',
-			'ImageCaption',
-			'ImageStyle',
-			'ImageToolbar',
-			'ImageUpload',
-			'List',
-			'EasyImage',
-			'CKFinderUploadAdapter'
-		];
-		config.toolbar.items = [ 'heading', '|', 'bold', 'italic', 'link' ];
-	}
+  if (inlineElement.tagName.toLowerCase() == 'header') {
+    config.removePlugins = [
+      'Blockquote',
+      'Image',
+      'ImageCaption',
+      'ImageStyle',
+      'ImageToolbar',
+      'ImageUpload',
+      'List',
+      'EasyImage',
+      'CKFinderUploadAdapter',
+    ];
+    config.toolbar.items = ['heading', '|', 'bold', 'italic', 'link'];
+  }
 
-	InlineEditor
-		.create( inlineElement, config )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( err => {
-			console.error( err );
-		} );
-} );
+  InlineEditor.create(inlineElement, config)
+    .then(editor => {
+      window.editor = editor;
+    })
+    .catch(err => {
+      console.error(err);
+    });
+});

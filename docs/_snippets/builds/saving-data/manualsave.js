@@ -10,103 +10,102 @@ import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud
 let HTTP_SERVER_LAG = 500;
 let isDirty = false;
 
-document.querySelector( '#snippet-manualsave-lag' ).addEventListener( 'change', evt => {
-	HTTP_SERVER_LAG = evt.target.value;
-} );
+document.querySelector('#snippet-manualsave-lag').addEventListener('change', evt => {
+  HTTP_SERVER_LAG = evt.target.value;
+});
 
-ClassicEditor
-	.create( document.querySelector( '#snippet-manualsave' ), {
-		cloudServices: CS_CONFIG,
-		toolbar: {
-			viewportTopOffset: window.getViewportTopOffsetConfig()
-		}
-	} )
-	.then( editor => {
-		window.editor = editor;
+ClassicEditor.create(document.querySelector('#snippet-manualsave'), {
+  cloudServices: CS_CONFIG,
+  toolbar: {
+    viewportTopOffset: window.getViewportTopOffsetConfig(),
+  },
+})
+  .then(editor => {
+    window.editor = editor;
 
-		handleStatusChanges( editor );
-		handleSaveButton( editor );
-		handleBeforeunload( editor );
-	} )
-	.catch( err => {
-		console.error( err.stack );
-	} );
+    handleStatusChanges(editor);
+    handleSaveButton(editor);
+    handleBeforeunload(editor);
+  })
+  .catch(err => {
+    console.error(err.stack);
+  });
 
 // Handle clicking the "Save" button.
-function handleSaveButton( editor ) {
-	const saveButton = document.querySelector( '#snippet-manualsave-save' );
-	const pendingActions = editor.plugins.get( 'PendingActions' );
+function handleSaveButton(editor) {
+  const saveButton = document.querySelector('#snippet-manualsave-save');
+  const pendingActions = editor.plugins.get('PendingActions');
 
-	saveButton.addEventListener( 'click', evt => {
-		const data = editor.getData();
-		const action = pendingActions.add( 'Saving in progress.' );
+  saveButton.addEventListener('click', evt => {
+    const data = editor.getData();
+    const action = pendingActions.add('Saving in progress.');
 
-		evt.preventDefault();
+    evt.preventDefault();
 
-		// Fake HTTP server's lag.
-		setTimeout( () => {
-			updateServerDataConsole( data );
+    // Fake HTTP server's lag.
+    setTimeout(() => {
+      updateServerDataConsole(data);
 
-			pendingActions.remove( action );
+      pendingActions.remove(action);
 
-			// Reset isDirty only if data didn't change in the meantime.
-			if ( data == editor.getData() ) {
-				isDirty = false;
-			}
+      // Reset isDirty only if data didn't change in the meantime.
+      if (data == editor.getData()) {
+        isDirty = false;
+      }
 
-			updateStatus( editor );
-		}, HTTP_SERVER_LAG );
-	} );
+      updateStatus(editor);
+    }, HTTP_SERVER_LAG);
+  });
 }
 
-function handleStatusChanges( editor ) {
-	const pendingActions = editor.plugins.get( 'PendingActions' );
+function handleStatusChanges(editor) {
+  const pendingActions = editor.plugins.get('PendingActions');
 
-	pendingActions.on( 'change:hasAny', () => updateStatus( editor ) );
+  pendingActions.on('change:hasAny', () => updateStatus(editor));
 
-	editor.model.document.on( 'change:data', () => {
-		isDirty = true;
+  editor.model.document.on('change:data', () => {
+    isDirty = true;
 
-		updateStatus( editor );
-	} );
+    updateStatus(editor);
+  });
 }
 
-function handleBeforeunload( editor ) {
-	window.addEventListener( 'beforeunload', evt => {
-		if ( editor.plugins.get( 'PendingActions' ).hasAny ) {
-			evt.preventDefault();
-		}
-	} );
+function handleBeforeunload(editor) {
+  window.addEventListener('beforeunload', evt => {
+    if (editor.plugins.get('PendingActions').hasAny) {
+      evt.preventDefault();
+    }
+  });
 }
 
-function updateStatus( editor ) {
-	const buttonContainer = document.querySelector( '#snippet-manualsave-container' );
+function updateStatus(editor) {
+  const buttonContainer = document.querySelector('#snippet-manualsave-container');
 
-	if ( isDirty ) {
-		buttonContainer.classList.add( 'active' );
-	} else {
-		buttonContainer.classList.remove( 'active' );
-	}
+  if (isDirty) {
+    buttonContainer.classList.add('active');
+  } else {
+    buttonContainer.classList.remove('active');
+  }
 
-	if ( editor.plugins.get( 'PendingActions' ).hasAny ) {
-		buttonContainer.classList.add( 'saving' );
-	} else {
-		buttonContainer.classList.remove( 'saving' );
-	}
+  if (editor.plugins.get('PendingActions').hasAny) {
+    buttonContainer.classList.add('saving');
+  } else {
+    buttonContainer.classList.remove('saving');
+  }
 }
 
 let consoleUpdates = 0;
 
-function updateServerDataConsole( msg ) {
-	const console = document.querySelector( '#snippet-manualsave-console' );
+function updateServerDataConsole(msg) {
+  const console = document.querySelector('#snippet-manualsave-console');
 
-	consoleUpdates++;
-	console.classList.add( 'updated' );
-	console.textContent = msg;
+  consoleUpdates++;
+  console.classList.add('updated');
+  console.textContent = msg;
 
-	setTimeout( () => {
-		if ( --consoleUpdates == 0 ) {
-			console.classList.remove( 'updated' );
-		}
-	}, 500 );
+  setTimeout(() => {
+    if (--consoleUpdates == 0) {
+      console.classList.remove('updated');
+    }
+  }, 500);
 }

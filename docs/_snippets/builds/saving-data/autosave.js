@@ -9,67 +9,66 @@ import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud
 
 let HTTP_SERVER_LAG = 500;
 
-document.querySelector( '#snippet-autosave-lag' ).addEventListener( 'change', evt => {
-	HTTP_SERVER_LAG = evt.target.value;
-} );
+document.querySelector('#snippet-autosave-lag').addEventListener('change', evt => {
+  HTTP_SERVER_LAG = evt.target.value;
+});
 
-ClassicEditor
-	.create( document.querySelector( '#snippet-autosave' ), {
-		cloudServices: CS_CONFIG,
-		toolbar: {
-			viewportTopOffset: window.getViewportTopOffsetConfig()
-		},
-		autosave: {
-			save( editor ) {
-				return saveData( editor.getData() );
-			}
-		}
-	} )
-	.then( editor => {
-		window.editor = editor;
+ClassicEditor.create(document.querySelector('#snippet-autosave'), {
+  cloudServices: CS_CONFIG,
+  toolbar: {
+    viewportTopOffset: window.getViewportTopOffsetConfig(),
+  },
+  autosave: {
+    save(editor) {
+      return saveData(editor.getData());
+    },
+  },
+})
+  .then(editor => {
+    window.editor = editor;
 
-		displayStatus( editor );
-	} )
-	.catch( err => {
-		console.error( err.stack );
-	} );
+    displayStatus(editor);
+  })
+  .catch(err => {
+    console.error(err.stack);
+  });
 
-function saveData( data ) {
-	return new Promise( resolve => {
-		// Fake HTTP server's lag.
-		setTimeout( () => {
-			updateServerDataConsole( data );
+function saveData(data) {
+  return new Promise(resolve => {
+    // Fake HTTP server's lag.
+    setTimeout(() => {
+      updateServerDataConsole(data);
 
-			resolve();
-		}, HTTP_SERVER_LAG );
-	} );
+      resolve();
+    }, HTTP_SERVER_LAG);
+  });
 }
 
-function displayStatus( editor ) {
-	const pendingActions = editor.plugins.get( 'PendingActions' );
-	const statusIndicator = document.querySelector( '#snippet-autosave-status' );
+function displayStatus(editor) {
+  const pendingActions = editor.plugins.get('PendingActions');
+  const statusIndicator = document.querySelector('#snippet-autosave-status');
 
-	pendingActions.on( 'change:hasAny', ( evt, propertyName, newValue ) => {
-		if ( newValue ) {
-			statusIndicator.classList.add( 'busy' );
-		} else {
-			statusIndicator.classList.remove( 'busy' );
-		}
-	} );
+  pendingActions.on('change:hasAny', (evt, propertyName, newValue) => {
+    if (newValue) {
+      statusIndicator.classList.add('busy');
+    } else {
+      statusIndicator.classList.remove('busy');
+    }
+  });
 }
 
 let consoleUpdates = 0;
 
-function updateServerDataConsole( msg ) {
-	const console = document.querySelector( '#snippet-autosave-console' );
+function updateServerDataConsole(msg) {
+  const console = document.querySelector('#snippet-autosave-console');
 
-	consoleUpdates++;
-	console.classList.add( 'updated' );
-	console.textContent = msg;
+  consoleUpdates++;
+  console.classList.add('updated');
+  console.textContent = msg;
 
-	setTimeout( () => {
-		if ( --consoleUpdates == 0 ) {
-			console.classList.remove( 'updated' );
-		}
-	}, 500 );
+  setTimeout(() => {
+    if (--consoleUpdates == 0) {
+      console.classList.remove('updated');
+    }
+  }, 500);
 }

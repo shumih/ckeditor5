@@ -446,7 +446,7 @@ MultirootEditor
 		footerleft: document.querySelector( '#footer-left' ),
 		footerright: document.querySelector( '#footer-right' )
 	}, {
-		plugins: [ Essentials, Paragraph, Heading, Bold, Italic, List, Link, BlockQuote, Image, ImageCaption,
+		plugins: [ Essentials, Paragraph, Heading, Bold, Italic, List, Input, BlockQuote, Image, ImageCaption,
 			ImageStyle, ImageToolbar, ImageUpload, Table, TableToolbar, MediaEmbed, EasyImage ],
 		toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'imageUpload', 'blockQuote',
 			'insertTable', 'mediaEmbed', 'undo', 'redo' ],

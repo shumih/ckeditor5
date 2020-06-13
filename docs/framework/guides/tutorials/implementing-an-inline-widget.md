@@ -5,9 +5,7 @@ order: 10
 
 # Implementing an inline widget
 
-In this tutorial, you will learn how to implement an inline widget.
-
-You will build a "placeholder" feature that allows the users to insert predefined placeholders, like a date or a surname, into the document. You will use widget utilities and conversion in order to define the behavior of this feature. Later on, you will use dropdown utilities to create a dropdown that will allow for inserting new placeholders. You will also learn how to use the editor configuration to define allowed placeholder names.
+In this tutorial, you will learn how to implement an inline widget. We will build a "Placeholder" feature which allow the user to insert predefined placeholders, like a date or a surname, into the document. We will use widget utils and conversion in order to define the behavior of this feature. Later on, we will use dropdown utils to create a dropdown which will allow inserting new placeholders. We will also learn how to use the editor configuration to define allowed placeholder names.
 
 <info-box>
 	If you want to see the final product of this tutorial before you plunge in, check out the [demo](#demo).
@@ -15,11 +13,11 @@ You will build a "placeholder" feature that allows the users to insert predefine
 
 ## Before you start ⚠️
 
-This guide assumes that you are familiar with the widgets concept introduced in the {@link framework/guides/tutorials/implementing-a-block-widget Implementing a block widget} tutorial. The tutorial will also reference various concepts from the {@link framework/guides/architecture/intro CKEditor 5 architecture}.
+This guide assumes that you are familiar with widgets concept introduced in the {@link framework/guides/tutorials/implementing-a-block-widget Implementing a block widget} tutorial. We will also reference various concepts from {@link framework/guides/architecture/intro CKEditor 5 architecture}.
 
 ## Bootstrapping the project
 
-The overall project structure will be similar to one described in {@link framework/guides/tutorials/implementing-a-block-widget#lets-start Let's start} and {@link framework/guides/tutorials/implementing-a-block-widget#plugin-structure Plugin structure} sections of the "Implementing a block widget" tutorial.
+The overall project structure will be similar to this described in {@link framework/guides/tutorials/implementing-a-block-widget#lets-start Let's start} and {@link framework/guides/tutorials/implementing-a-block-widget#plugin-structure Plugin structure} sections.
 
 First, install required dependencies:
 
@@ -154,7 +152,7 @@ ClassicEditor
 	} );
 ```
 
-Before building the project you still need to define the `Placeholder` plugin. The project will have a structure as below:
+Before building the project we still need to define `Placeholder` plugin. The project will have a structure as below:
 
 ```
 ├── app.js
@@ -172,12 +170,12 @@ Before building the project you still need to define the `Placeholder` plugin. T
 │   └── theme
 │       └── placeholder.css
 │
-│   ... the rest of the plugin files go here as well.
+│   ... the rest of plugin files go here as well
 │
 └── webpack.config.js
 ```
 
-You can see that the placeholder feature has an established plugin structure: the master (glue) plugin (`placeholder/placeholder.js`), the "editing" (`placeholder/placeholderediting.js`) and the "UI" (`placeholder/placeholderui.js`) parts.
+You can see that the placeholder feature has an established plugin structure: the master (glue) plugin (`placeholder/placeholder.js`), the "editing" (`placeholder/placeholderediting.js`) and the "ui" (`placeholder/placeholderui.js`) parts.
 
 The master (glue) plugin:
 
@@ -224,11 +222,11 @@ export default class PlaceholderEditing extends Plugin {
 }
 ```
 
-At this stage you can build the project and open it in the browser to verify if it is building correctly.
+At this stage we can build the project and open it in the browser to verify if it is building correctly.
 
 ## The model and the view layers
 
-The placeholder feature will be {@link module:engine/model/schema~SchemaItemDefinition defined as an inline} (text-like) element so it will be inserted into other editor blocks, like `<paragraph>`, that allow text. The placeholder will have a `name` attribute. This means that the model containing some text and a placeholder will look like this:
+The placeholder feature will be {@link module:engine/model/schema~SchemaItemDefinition defined as  an inline} (text-like) element so it will be inserted in other editor blocks, like `<paragraph>`, that allow text. The placeholder will have a `name` attribute. This means that the model containing some text and a placeholder will look like this:
 
 ```html
 <paragraph>
@@ -238,9 +236,9 @@ The placeholder feature will be {@link module:engine/model/schema~SchemaItemDefi
 
 ### Defining the schema
 
-The `<placeholder>` element should be treated as `$text` so it must be defined with `isInline: true`. You want to allow it wherever the `$text` is allowed so you add `allowWhere: '$text'`. Finally, you will also need the `name` attribute.
+The `<placeholder>` element should be treated as `$text` so it must be defined with `isInline: true`. We want to allow it wherever the `$text` is allowed so we add `allowWhere: '$text'`. Finally, we will also need the `name` attribute.
 
-You will also use this opportunity to import the theme file (`theme/placeholder.css`).
+We will also use this occasion to import the theme file (`theme/placeholder.css`).
 
 ```js
 // placeholder/placeholderediting.js
@@ -263,10 +261,10 @@ export default class PlaceholderEditing extends Plugin {
 			// Allow wherever text is allowed:
 			allowWhere: '$text',
 
-			// The placeholder will act as an inline node:
+			// The placeholder will acts as an inline node:
 			isInline: true,
 
-			// The inline widget is self-contained so it cannot be split by the caret and can be selected:
+			// The inline-widget is self-contained so cannot be split by the caret and can be selected:
 			isObject: true,
 
 			// The placeholder can have many types, like date, name, surname, etc:
@@ -276,18 +274,18 @@ export default class PlaceholderEditing extends Plugin {
 }
 ```
 
-The schema is defined so now you can define the model-view converters.
+The schema is defined so now we can define the model-view converters.
 
 ### Defining converters
 
-The HTML structure (data output) of the converter will be a `<span>` with a `placeholder` class. The text inside the `<span>` will be the placeholder's name.
+The HTML structure (data output) of the converter will be a `<span>` with a `placeholder` class. The text inside the `<span>` will the placeholder's name.
 
 ```html
 <span class="placeholder">{name}</span>
 ```
 
-* **Upcast conversion**. This view-to-model converter will look for `<span>`s with the `placeholder` class, read the `<span>`'s text and create model `<placeholder>` elements with the `name` attribute set accordingly.
-* **Downcast conversion**. The model-to-view conversion will be slightly different for "editing" and "data" pipelines as the "editing downcast" pipeline will use widget utilities to enable widget-specific behavior in the editing view. In both pipelines, the element will be rendered using the same structure.
+* **Upcast conversion**. This view-to-model converter will look for `<span>`s with class `placeholder`, read the `<span>`'s text and create a model `<placeholder>` elements with the `name` attribute set accordingly.
+* **Downcast conversion**. The model-to-view conversion will be slightly different for "editing" and "data" pipelines as the "editing downcast" pipeline will use widget utilities to enable widget specific behavior in the editing view. In both pipelines, the element will be rendered using the same structure.
 
 ```js
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
@@ -335,7 +333,7 @@ export default class PlaceholderEditing extends Plugin {
 			view: ( modelItem, viewWriter ) => {
 				const widgetElement = createPlaceholderView( modelItem, viewWriter );
 
-				// Enable widget handling on a placeholder element inside the editing view.
+				// Enable widget handling on placeholder element inside editing view.
 				return toWidget( widgetElement, viewWriter );
 			}
 		} );
@@ -365,7 +363,7 @@ export default class PlaceholderEditing extends Plugin {
 
 ### Feature styles
 
-As you could notice, the editing part imports the `./theme/placeholder.css` CSS file which describes how the placeholder is displayed in th editing view:
+As you could notice the editing part imports the `./theme/placeholder.css` CSS file which describes how the placeholder is displayed in th editing view:
 
 ```css
 /* placeholder/theme/placeholder.css */
@@ -385,7 +383,7 @@ As you could notice, the editing part imports the `./theme/placeholder.css` CSS 
 
 ### Command
 
-The {@link framework/guides/architecture/core-editor-architecture#commands command} for the placeholder feature will insert a `<placeholder>` element (if allowed by the schema) at the selection. The command will accept the `options.value` parameter (other CKEditor 5 commands also use this pattern) to set the placeholder name.
+A {@link framework/guides/architecture/core-editor-architecture#commands command} for placeholder feature will insert a `<placeholder>` element (if allowed by the schema) at the selection. The command will accept `options.value` parameter (other CKEditor 5's commands also uses this pattern) to set the placeholder's name.
 
 ```js
 // placeholder/placeholdercommand.js
@@ -397,13 +395,13 @@ export default class PlaceholderCommand extends Command {
 		const editor = this.editor;
 
 		editor.model.change( writer => {
-			// Create a <placeholder> elment with the "name" attribute...
+			// Create <placeholder> elment with name attribute...
 			const placeholder = writer.createElement( 'placeholder', { name: value } );
 
 			// ... and insert it into the document.
 			editor.model.insertContent( placeholder );
 
-			// Put the selection on the inserted element.
+			// Put the selection on inserted element.
 			writer.setSelection( placeholder, 'on' );
 		} );
 	}
@@ -419,7 +417,7 @@ export default class PlaceholderCommand extends Command {
 }
 ```
 
-Import the created command and add it to the editor commands:
+Import the created command and add it to editor's commands:
 
 ```js
 // placeholder/placeholderediting.js
@@ -459,7 +457,7 @@ export default class PlaceholderEditing extends Plugin {
 
 ### Let's see it!
 
-You can rebuild the project now. You should be able to execute the `placeholder` command to insert a new placeholder:
+You can rebuild the project now and you should be able to execute the `placeholder` command to insert a new placeholder:
 
 ```js
 editor.execute( 'placeholder', { value: 'time' } );
@@ -467,11 +465,11 @@ editor.execute( 'placeholder', { value: 'time' } );
 
 This should result in:
 
-{@img assets/img/tutorial-implementing-an-inline-widget-1.png Screenshot of a placeholder widget in action in CKEditor 5 WYSIWYG editor.}
+{@img assets/img/tutorial-implementing-an-inline-widget-1.png Screenshot of a placeholder widget in action.}
 
 ### Fixing position mapping
 
-If you play more with the widget (e.g. try to select it by dragging the mouse from its right to the left edge) you will see the following error logged to the console:
+If you play now more with the widget (e.g. try to select it by dragging the mouse from its right to the left edge) you will see the following error logged on the console:
 
 ```
 Uncaught CKEditorError: model-nodelist-offset-out-of-bounds: Given offset cannot be found in the node list.
@@ -489,9 +487,9 @@ view:
 foo<span class="placeholder">{name}</span>bar
 ```
 
-You could say that in the view there is "more" text than in the model. This means that some positions in the view cannot automatically map to positions in the model. Namely &mdash; those are positions inside the `<span>` element.
+You can say that in the view there is "more" text than in the model. This means that some positions in the view cannot automatically map to positions in the model. Namely &mdash; those are positions inside the `<span>` element.
 
-Fortunately, CKEditor 5 {@link module:engine/conversion/mapper~Mapper#viewToModelPosition allows customizing the mapping logic}. Also, since mapping to an empty model element is a pretty common scenario, there is a ready-to-use utility {@link module:widget/utils~viewToModelPositionOutsideModelElement `viewToModelPositionOutsideModelElement()`} that you can use here like that:
+Fortunately, CKEditor 5 {@link module:engine/conversion/mapper~Mapper#viewToModelPosition allows customizing the mapping logic}. Also, since mapping to an empty model element is a pretty common scenario, there is a ready-to-use util {@link module:widget/utils~viewToModelPositionOutsideModelElement `viewToModelPositionOutsideModelElement()`} which we can use here like that:
 
 ```js
 // placeholder/placeholderediting.js
@@ -539,15 +537,15 @@ export default class PlaceholderEditing extends Plugin {
 }
 ```
 
-After adding the custom mapping, the mapping will work perfectly. Every position inside the view `<span>` element will be mapped to a position outside the `<placeholder>` in the model.
+After adding the custom mapping, the mapping will work perfectly. Every position inside the view `<span>` element will be mapped to a position outside `<placeholder>` in the model.
 
 ## Creating the UI
 
 The UI part will provide a dropdown button from which the user can select a placeholder to insert into the editor.
 
-CKEditor 5 Framework includes helpers to create different {@link framework/guides/architecture/ui-library#dropdowns dropdowns} like toolbar or list dropdowns.
+The CKEditor 5 framework features helpers to create different {@link framework/guides/architecture/ui-library#dropdowns dropdowns} like toolbar or list dropdowns.
 
-In this tutorial, you will create a dropdown with a list of available placeholders.
+In this tutorial, we will create a dropdown with a list of available placeholders.
 
 ```js
 // placeholder/placeholderui.js
@@ -565,7 +563,7 @@ export default class PlaceholderUI extends Plugin {
 		const t = editor.t;
 		const placeholderNames = [ 'date', 'first name', 'surname' ];
 
-		// The "placeholder" dropdown must be registered among the UI components of the editor
+		// The "placeholder" dropdown must be registered among UI components of the editor
 		// to be displayed in the toolbar.
 		editor.ui.componentFactory.add( 'placeholder', locale => {
 			const dropdownView = createDropdown( locale );
@@ -581,7 +579,7 @@ export default class PlaceholderUI extends Plugin {
 				withText: true
 			} );
 
-			// Execute the command when the dropdown item is clicked (executed).
+			// Execute the command when the dropdown items is clicked (executed).
 			this.listenTo( dropdownView, 'execute', evt => {
 				editor.execute( 'placeholder', { value: evt.source.commandParam } );
 				editor.editing.view.focus();
@@ -634,7 +632,7 @@ ClassicEditor
 	.create( document.querySelector( '#editor' ), {
 		plugins: [ Essentials, Paragraph, Heading, List, Bold, Italic, Placeholder ],
 
-		// Insert the "placeholder" dropdown into the editor toolbar.
+		// Insert the "placeholder" dropdown to the editor toolbar.
 		toolbar: [ 'heading', 'bold', 'italic', 'numberedList', 'bulletedList', '|', 'placeholder' ]
 	} )
 	.then( editor => {
@@ -645,7 +643,7 @@ ClassicEditor
 	} );
 ```
 
-To make this plugin extensible, placeholder types will be read from the editor configuration.
+To make this plugin extensible, the types of placeholders will be read from editor configuration.
 
 The first step is to define the placeholder configuration in the editing plugin:
 
@@ -685,7 +683,7 @@ export default class PlaceholderEditing extends Plugin {
 }
 ```
 
-Now modify the UI plugin so it will read placeholder types from the configuration:
+Now let's modify the UI plugin so it will read placeholder types from the configuration:
 
 ```js
 // placeholder/placeholderui.js
@@ -703,7 +701,7 @@ export default class PlaceholderUI extends Plugin {
 }
 ```
 
-The plugin is now ready to accept the configuration. Check how this works by adding the `placeholderConfig` configuration in the editor's `create()` method:
+Now the plugins is ready to accept configuration. Let's check how this works by adding `placeholderConfig` configuration in editor's create method:
 
 ```js
 // ... imports
@@ -719,9 +717,9 @@ ClassicEditor
 	// ...
 ```
 
-If you open the dropdown in the toolbar, you will see a new list of placeholders to insert.
+Now if you open the dropdown in the toolbar you'll see the new list of placeholders to insert.
 
-{@img assets/img/tutorial-implementing-an-inline-widget-2.png Screenshot of the placeholder widgets being inserted using the dropdown in CKEditor 5 WYSIWYG editor.}
+{@img assets/img/tutorial-implementing-an-inline-widget-2.png Screenshot of the placeholder widgets being inserted using the dropdown.}
 
 ## Demo
 
@@ -762,13 +760,13 @@ class PlaceholderCommand extends Command {
 		const editor = this.editor;
 
 		editor.model.change( writer => {
-			// Create a <placeholder> elment with the "name" attribute...
+			// Create <placeholder> elment with name attribute...
 			const placeholder = writer.createElement( 'placeholder', { name: value } );
 
 			// ... and insert it into the document.
 			editor.model.insertContent( placeholder );
 
-			// Put the selection on the inserted element.
+			// Put the selection on inserted element.
 			writer.setSelection( placeholder, 'on' );
 		} );
 	}
@@ -789,7 +787,7 @@ class PlaceholderUI extends Plugin {
 		const t = editor.t;
 		const placeholderNames = editor.config.get( 'placeholderConfig.types' );
 
-		// The "placeholder" dropdown must be registered among the UI components of the editor
+		// The "placeholder" dropdown must be registered among UI components of the editor
 		// to be displayed in the toolbar.
 		editor.ui.componentFactory.add( 'placeholder', locale => {
 			const dropdownView = createDropdown( locale );
@@ -805,7 +803,7 @@ class PlaceholderUI extends Plugin {
 				withText: true
 			} );
 
-			// Execute the command when the dropdown item is clicked (executed).
+			// Execute the command when the dropdown items is clicked (executed).
 			this.listenTo( dropdownView, 'execute', evt => {
 				editor.execute( 'placeholder', { value: evt.source.commandParam } );
 				editor.editing.view.focus();
@@ -865,10 +863,10 @@ class PlaceholderEditing extends Plugin {
 			// Allow wherever text is allowed:
 			allowWhere: '$text',
 
-			// The placeholder will act as an inline node:
+			// The placeholder will acts as an inline node:
 			isInline: true,
 
-			// The inline widget is self-contained so it cannot be split by the caret and it can be selected:
+			// The inline-widget is self-contained so cannot be split by the caret and can be selected:
 			isObject: true,
 
 			// The placeholder can have many types, like date, name, surname, etc:
@@ -897,7 +895,7 @@ class PlaceholderEditing extends Plugin {
 			view: ( modelItem, viewWriter ) => {
 				const widgetElement = createPlaceholderView( modelItem, viewWriter );
 
-				// Enable widget handling on a placeholder element inside the editing view.
+				// Enable widget handling on placeholder element inside editing view.
 				return toWidget( widgetElement, viewWriter );
 			}
 		} );

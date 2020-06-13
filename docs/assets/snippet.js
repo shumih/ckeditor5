@@ -15,7 +15,7 @@
  * @returns {Number} The value of the offset.
  */
 window.getViewportTopOffsetConfig = function() {
-	const documentElement = document.documentElement;
+  const documentElement = document.documentElement;
 
-	return parseInt( window.getComputedStyle( documentElement ).getPropertyValue( '--ck-snippet-viewport-top-offset' ) );
+  return parseInt(window.getComputedStyle(documentElement).getPropertyValue('--ck-snippet-viewport-top-offset'));
 };

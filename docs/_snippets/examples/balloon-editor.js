@@ -9,13 +9,12 @@ import BalloonEditor from '@ckeditor/ckeditor5-build-balloon/src/ckeditor';
 
 import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config';
 
-BalloonEditor
-	.create( document.querySelector( '#snippet-balloon-editor' ), {
-		cloudServices: CS_CONFIG
-	} )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( err => {
-		console.error( err );
-	} );
+BalloonEditor.create(document.querySelector('#snippet-balloon-editor'), {
+  cloudServices: CS_CONFIG,
+})
+  .then(editor => {
+    window.editor = editor;
+  })
+  .catch(err => {
+    console.error(err);
+  });

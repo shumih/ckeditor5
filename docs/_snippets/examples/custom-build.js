@@ -18,28 +18,17 @@ import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 
 import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config';
 
-ClassicEditor
-	.create( document.querySelector( '#snippet-custom-build' ), {
-		plugins: [
-			Essentials,
-			Paragraph,
-			Bold,
-			Italic,
-			Underline,
-			Strikethrough,
-			Code,
-			Highlight,
-			EasyImage
-		],
-		toolbar: {
-			items: [ 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'highlight', '|', 'undo', 'redo' ],
-			viewportTopOffset: window.getViewportTopOffsetConfig()
-		},
-		cloudServices: CS_CONFIG
-	} )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( err => {
-		console.error( err );
-	} );
+ClassicEditor.create(document.querySelector('#snippet-custom-build'), {
+  plugins: [Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Highlight, EasyImage],
+  toolbar: {
+    items: ['bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'highlight', '|', 'undo', 'redo'],
+    viewportTopOffset: window.getViewportTopOffsetConfig(),
+  },
+  cloudServices: CS_CONFIG,
+})
+  .then(editor => {
+    window.editor = editor;
+  })
+  .catch(err => {
+    console.error(err);
+  });
