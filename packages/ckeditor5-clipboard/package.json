@@ -1,0 +1,32 @@
+{
+  "name": "@ckeditor/ckeditor5-clipboard",
+  "version": "0.0.1",
+  "description": "Clipboard integration for CKEditor 5.",
+  "keywords": [
+    "ckeditor",
+    "ckeditor5",
+    "ckeditor 5",
+    "ckeditor5-feature",
+    "ckeditor5-plugin"
+  ],
+  "peerDependencies": {
+    "@ckeditor/ckeditor5-core": "12.1.0",
+    "@ckeditor/ckeditor5-engine": "git+https://github.com/ckeditor/ckeditor5-engine.git#ie11",
+    "@ckeditor/ckeditor5-utils": "git+https://github.com/ckeditor/ckeditor5-utils.git#ie11"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.7.1"
+  },
+  "author": "Shumikhin Anton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shumih/ckeditor5-clipboard.git"
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

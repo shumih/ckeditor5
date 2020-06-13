@@ -1,0 +1,17 @@
+.ck-widget.stencil-template-preview {
+  display: inline-block;
+  margin: 0;
+}
+
+.stencil-template-wrapper > * {
+  pointer-events: none;
+}
+
+.ck-max-width-template-block-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ck-max-width-template-block-wrapper > .ck-max-width {
+  flex: 1;
+}

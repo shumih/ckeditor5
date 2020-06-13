@@ -1,0 +1,205 @@
+@import 'all.css';
+
+@font-face {
+  font-family: 'VTB Group Light';
+  src: url('/assets/fonts/VTB/VTB45.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 46';
+  src: url('/assets/fonts/VTB/VTB46.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 47';
+  src: url('/assets/fonts/VTB/VTB46.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Book';
+  src: url('/assets/fonts/VTB/VTB55.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 56';
+  src: url('/assets/fonts/VTB/VTB56.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 57';
+  src: url('/assets/fonts/VTB/VTB57.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 65';
+  src: url('/assets/fonts/VTB/VTB65.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 66';
+  src: url('/assets/fonts/VTB/VTB66.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond';
+  src: url('/assets/fonts/VTB/VTB67.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 75';
+  src: url('/assets/fonts/VTB/VTB75.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 76';
+  src: url('/assets/fonts/VTB/VTB76.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 77';
+  src: url('/assets/fonts/VTB/VTB77.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 95';
+  src: url('/assets/fonts/VTB/VTB95.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 96';
+  src: url('/assets/fonts/VTB/VTB96.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group 97';
+  src: url('/assets/fonts/VTB/VTB97.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Light';
+  src: url('/assets/fonts/VTB/VTB45.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Light Oblique';
+  src: url('/assets/fonts/VTB/VTB46.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond Light';
+  src: url('/assets/fonts/VTB/VTB46.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Book';
+  src: url('/assets/fonts/VTB/VTB55.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Book Oblique';
+  src: url('/assets/fonts/VTB/VTB56.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond Book';
+  src: url('/assets/fonts/VTB/VTB57.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Demi Bold';
+  src: url('/assets/fonts/VTB/VTB65.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Demi Bold Oblique';
+  src: url('/assets/fonts/VTB/VTB66.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond Demi Bold';
+  src: url('/assets/fonts/VTB/VTB67.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Bold';
+  src: url('/assets/fonts/VTB/VTB75.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Bold Oblique';
+  src: url('/assets/fonts/VTB/VTB76.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond Bold';
+  src: url('/assets/fonts/VTB/VTB77.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Extra Bold';
+  src: url('/assets/fonts/VTB/VTB95.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Extra Bold Oblique';
+  src: url('/assets/fonts/VTB/VTB96.otf');
+}
+
+@font-face {
+  font-family: 'VTB Group Cond Extra Bold';
+  src: url('/assets/fonts/VTB/VTB97.otf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto/ROBOTO-REGULAR.TTF');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('/assets/fonts/Roboto/ROBOTO-MEDIUM.TTF');
+}
+
+.banner-header,
+.ck-heading_banner-header {
+  font-family: 'VTB Group Demi Bold', sans-serif;
+  font-size: 24px;
+  color: #0aa1e0;
+}
+
+.banner-text,
+.ck-heading_banner-text {
+  font-family: 'VTB Group Book', sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.ck-content {
+  /*background-color: rebeccapurple !important;*/
+}
+
+a {
+  color: #0000ee;
+}
+
+p {
+  margin: 0;
+}
+div.hidden[contenteditable] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  display: block;
+  z-index: -1;
+  color: transparent;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  resize: none;
+  outline: none;
+  -webkit-user-select: text;
+  user-select: text;
+}

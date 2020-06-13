@@ -1,0 +1,14 @@
+{
+	"video widget": "Label for the video widget.",
+	"Side video": "Label for the Side video option.",
+	"Full size video": "Label for the Full size video option.",
+	"Left aligned video": "Label for the Left aligned video option",
+	"Centered video": "Label for the Centered video option",
+	"Right aligned video": "Label for the Right aligned video option",
+	"Change video text alternative": "Label for the Change video text alternative button.",
+	"Text alternative": "Label for the video text alternative input.",
+	"Enter video caption": "Placeholder text for video caption displayed when caption is empty.",
+	"Insert video": "Label for the insert video toolbar button.",
+	"Upload failed": "Title of the notification displayed when upload fails.",
+	"Video toolbar": "The label used by assistive technologies describing an video toolbar attached to an video widget."
+}

@@ -1,0 +1,89 @@
+# Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+#
+#                                     !!! IMPORTANT !!!
+#
+#         Before you edit this file, please keep in mind that contributing to the project
+#                translations is possible ONLY via the Transifex online service.
+#
+#         To submit your translations, visit https://www.transifex.com/ckeditor/ckeditor5.
+#
+#                   To learn more, check out the official contributor's guide:
+#     https://ckeditor.com/docs/ckeditor5/latest/framework/guides/contributing/contributing.html
+#
+msgid ""
+msgstr ""
+"Language-Team: Japanese (https://www.transifex.com/ckeditor/teams/11143/ja/)\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "Label for the insert table toolbar button."
+msgid "Insert table"
+msgstr "表の挿入"
+
+msgctxt "Label for the set/unset table header column button."
+msgid "Header column"
+msgstr "見出し列"
+
+msgctxt "Label for the insert table column to the left of the current one button."
+msgid "Insert column left"
+msgstr ""
+
+msgctxt "Label for the insert table column to the right of the current one button."
+msgid "Insert column right"
+msgstr ""
+
+msgctxt "Label for the delete table column button."
+msgid "Delete column"
+msgstr "列を削除"
+
+msgctxt "Label for the table column dropdown button."
+msgid "Column"
+msgstr "列"
+
+msgctxt "Label for the set/unset table header row button."
+msgid "Header row"
+msgstr "見出し行"
+
+msgctxt "Label for the insert row below button."
+msgid "Insert row below"
+msgstr "下に行を挿入"
+
+msgctxt "Label for the insert row above button."
+msgid "Insert row above"
+msgstr "上に行を挿入"
+
+msgctxt "Label for the delete table row button."
+msgid "Delete row"
+msgstr "行を削除"
+
+msgctxt "Label for the table row dropdown button."
+msgid "Row"
+msgstr "行"
+
+msgctxt "Label for the merge table cell up button."
+msgid "Merge cell up"
+msgstr "上のセルと結合"
+
+msgctxt "Label for the merge table cell right button."
+msgid "Merge cell right"
+msgstr "右のセルと結合"
+
+msgctxt "Label for the merge table cell down button."
+msgid "Merge cell down"
+msgstr "下のセルと結合"
+
+msgctxt "Label for the merge table cell left button."
+msgid "Merge cell left"
+msgstr "左のセルと結合"
+
+msgctxt "Label for the split table cell vertically button."
+msgid "Split cell vertically"
+msgstr "横にセルを分離"
+
+msgctxt "Label for the split table cell horizontally button."
+msgid "Split cell horizontally"
+msgstr "縦にセルを分離"
+
+msgctxt "Label for the merge table cells button."
+msgid "Merge cells"
+msgstr "セルを結合"

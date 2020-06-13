@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="square" transform="translate(.5)">
+    <line x1=".455" x2=".455" y1=".87" y2="8.261"/>
+    <line x1="5" x2="5" y1="-2.767" y2="4.506" transform="rotate(90 5 .87)"/>
+    <g transform="matrix(-1 0 0 1 19.545 0)">
+      <line x1=".455" x2=".455" y1=".87" y2="8.261"/>
+      <line x1="5" x2="5" y1="-2.767" y2="4.506" transform="rotate(90 5 .87)"/>
+    </g>
+    <g transform="rotate(180 9.773 9.783)">
+      <line x1=".455" x2=".455" y1=".87" y2="8.261"/>
+      <line x1="5" x2="5" y1="-2.767" y2="4.506" transform="rotate(90 5 .87)"/>
+    </g>
+    <g transform="matrix(1 0 0 -1 0 19.565)">
+      <line x1=".455" x2=".455" y1=".87" y2="8.261"/>
+      <line x1="5" x2="5" y1="-2.767" y2="4.506" transform="rotate(90 5 .87)"/>
+    </g>
+  </g>
+</svg>

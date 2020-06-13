@@ -1,0 +1,65 @@
+# Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+#
+#                                     !!! IMPORTANT !!!
+#
+#         Before you edit this file, please keep in mind that contributing to the project
+#                translations is possible ONLY via the Transifex online service.
+#
+#         To submit your translations, visit https://www.transifex.com/ckeditor/ckeditor5.
+#
+#                   To learn more, check out the official contributor's guide:
+#     https://ckeditor.com/docs/ckeditor5/latest/framework/guides/contributing/contributing.html
+#
+msgid ""
+msgstr ""
+"Language-Team: Dutch (https://www.transifex.com/ckeditor/teams/11143/nl/)\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Label for the video widget."
+msgid "video widget"
+msgstr "afbeeldingswidget"
+
+msgctxt "Label for the Side video option."
+msgid "Side video"
+msgstr "Afbeelding naast tekst"
+
+msgctxt "Label for the Full size video option."
+msgid "Full size video"
+msgstr "Afbeelding op volledige grootte"
+
+msgctxt "Label for the Left aligned video option"
+msgid "Left aligned video"
+msgstr "Links uitgelijnde afbeelding"
+
+msgctxt "Label for the Centered video option"
+msgid "Centered video"
+msgstr "Gecentreerde afbeelding"
+
+msgctxt "Label for the Right aligned video option"
+msgid "Right aligned video"
+msgstr "Rechts uitgelijnde afbeelding"
+
+msgctxt "Label for the Change video text alternative button."
+msgid "Change video text alternative"
+msgstr "Verander alt-tekst van de afbeelding"
+
+msgctxt "Label for the video text alternative input."
+msgid "Text alternative"
+msgstr "Alt-tekst"
+
+msgctxt "Placeholder text for video caption displayed when caption is empty."
+msgid "Enter video caption"
+msgstr "Typ een afbeeldingsbijschrift"
+
+msgctxt "Label for the insert video toolbar button."
+msgid "Insert video"
+msgstr "Afbeelding toevoegen"
+
+msgctxt "Title of the notification displayed when upload fails."
+msgid "Upload failed"
+msgstr "Uploaden afbeelding mislukt"
+
+msgctxt "The label used by assistive technologies describing an video toolbar attached to an video widget."
+msgid "Video toolbar"
+msgstr "Afbeeldingswerkbalk"

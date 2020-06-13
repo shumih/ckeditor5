@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CKEditor 5 Framework – Quick start</title>
+  </head>
+  <body>
+    <div id="editor" class="editor">
+
+    </div>
+    <button type="button" onclick="onAdd()">Добавить</button>
+  </body>
+
+  <div id="content" class="editor-content"></div>
+  <script src="ckeditor-classic.js"></script>
+  <script>
+    var contentEl = document.getElementById('content');
+
+    function onAdd() {
+      editor.execute('insertTemplateBlock', window.templateBlocks[0]);
+    }
+
+		editor.setData(localStorage.getItem('editor-data'))
+    contentEl.innerHTML = editor.getData();
+    editor.model.document.on('change:data', function() {
+    	var editorData = editor.getData();
+      contentEl.innerHTML = editorData;
+			localStorage.setItem('editor-data', editorData)
+    });
+  </script>
+</html>

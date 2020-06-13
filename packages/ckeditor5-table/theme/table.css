@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ */
+.editor-content .editor-content-table,
+.ck-content .editor-content-table {
+  /* Give the table widget some air and center it horizontally */
+  margin: 1em auto;
+  display: table;
+}
+.editor-content .editor-content-table.outer-border table,
+.ck-content .editor-content-table.outer-border table {
+  border: 1px double #b3b3b3;
+}
+.editor-content .editor-content-table.inner-border td,
+.ck-content .editor-content-table.inner-border td,
+.editor-content .editor-content-table.inner-border th,
+.ck-content .editor-content-table.inner-border th {
+  border: 1px double #d9d9d9;
+}
+.editor-content .editor-content-table.inner-border:not(.outer-border) table tr:first-child td,
+.ck-content .editor-content-table.inner-border:not(.outer-border) table tr:first-child td {
+  border-top: 0;
+}
+.editor-content .editor-content-table.inner-border:not(.outer-border) table tr td:first-child,
+.ck-content .editor-content-table.inner-border:not(.outer-border) table tr td:first-child {
+  border-left: 0;
+}
+.editor-content .editor-content-table.inner-border:not(.outer-border) table tr:last-child td,
+.ck-content .editor-content-table.inner-border:not(.outer-border) table tr:last-child td {
+  border-bottom: 0;
+}
+.editor-content .editor-content-table.inner-border:not(.outer-border) table tr td:last-child,
+.ck-content .editor-content-table.inner-border:not(.outer-border) table tr td:last-child {
+  border-right: 0;
+}
+.editor-content .editor-content-table table,
+.ck-content .editor-content-table table {
+  /* The table cells should have slight borders */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* The outer border of the table should be slightly darker than the inner lines.
+	 Also see https://github.com/ckeditor/ckeditor5-table/issues/50. */
+}
+.editor-content .editor-content-table table td,
+.ck-content .editor-content-table table td,
+.editor-content .editor-content-table table th,
+.ck-content .editor-content-table table th {
+  min-width: 2em;
+  padding: 2px 6px;
+  border: none;
+}
+.editor-content .editor-content-table table td.ck-editor__nested-editable_focused,
+.ck-content .editor-content-table table td.ck-editor__nested-editable_focused,
+.editor-content .editor-content-table table th.ck-editor__nested-editable_focused,
+.ck-content .editor-content-table table th.ck-editor__nested-editable_focused,
+.editor-content .editor-content-table table td:focus,
+.ck-content .editor-content-table table td:focus,
+.editor-content .editor-content-table table th:focus,
+.ck-content .editor-content-table table th:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.editor-content .editor-content-table table th,
+.ck-content .editor-content-table table th {
+  font-weight: bold;
+  background: #fafafa;
+}
+
+.editor-content .editor-content-table.alignment-center,
+.editor-content .editor-content-table,
+.ck-content .editor-content-table.alignment-center,
+.ck-content .editor-content-table {
+  margin: 0 auto;
+}
+
+.editor-content .editor-content-table.alignment-left,
+.ck-content .editor-content-table.alignment-left {
+  margin: 0 auto 0 0;
+}
+
+.editor-content .editor-content-table.alignment-right,
+.ck-content .editor-content-table.alignment-right {
+  margin: 0 0 0 auto;
+}

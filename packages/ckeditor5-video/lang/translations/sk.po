@@ -1,0 +1,65 @@
+# Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+#
+#                                     !!! IMPORTANT !!!
+#
+#         Before you edit this file, please keep in mind that contributing to the project
+#                translations is possible ONLY via the Transifex online service.
+#
+#         To submit your translations, visit https://www.transifex.com/ckeditor/ckeditor5.
+#
+#                   To learn more, check out the official contributor's guide:
+#     https://ckeditor.com/docs/ckeditor5/latest/framework/guides/contributing/contributing.html
+#
+msgid ""
+msgstr ""
+"Language-Team: Slovak (https://www.transifex.com/ckeditor/teams/11143/sk/)\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+msgctxt "Label for the video widget."
+msgid "video widget"
+msgstr "widget obrázka"
+
+msgctxt "Label for the Side video option."
+msgid "Side video"
+msgstr "Bočný obrázok"
+
+msgctxt "Label for the Full size video option."
+msgid "Full size video"
+msgstr "Obrázok v plnej veľkosti"
+
+msgctxt "Label for the Left aligned video option"
+msgid "Left aligned video"
+msgstr "Zarovnať vľavo"
+
+msgctxt "Label for the Centered video option"
+msgid "Centered video"
+msgstr "Zarovnať na stred"
+
+msgctxt "Label for the Right aligned video option"
+msgid "Right aligned video"
+msgstr "Zarovnať vpravo"
+
+msgctxt "Label for the Change video text alternative button."
+msgid "Change video text alternative"
+msgstr "Zmeňte alternatívny text obrázka"
+
+msgctxt "Label for the video text alternative input."
+msgid "Text alternative"
+msgstr "Alternatívny text"
+
+msgctxt "Placeholder text for video caption displayed when caption is empty."
+msgid "Enter video caption"
+msgstr "Vložte popis obrázka"
+
+msgctxt "Label for the insert video toolbar button."
+msgid "Insert video"
+msgstr "Vložiť obrázok"
+
+msgctxt "Title of the notification displayed when upload fails."
+msgid "Upload failed"
+msgstr "Nahrávanie zlyhalo"
+
+msgctxt "The label used by assistive technologies describing an video toolbar attached to an video widget."
+msgid "Video toolbar"
+msgstr "Panel nástrojov obrázka"

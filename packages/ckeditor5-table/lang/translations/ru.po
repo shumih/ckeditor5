@@ -1,0 +1,133 @@
+# Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+#
+#                                     !!! IMPORTANT !!!
+#
+#         Before you edit this file, please keep in mind that contributing to the project
+#                translations is possible ONLY via the Transifex online service.
+#
+#         To submit your translations, visit https://www.transifex.com/ckeditor/ckeditor5.
+#
+#                   To learn more, check out the official contributor's guide:
+#     https://ckeditor.com/docs/ckeditor5/latest/framework/guides/contributing/contributing.html
+#
+msgid ""
+msgstr ""
+"Language-Team: Russian (https://www.transifex.com/ckeditor/teams/11143/ru/)\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgctxt "Label for the insert table toolbar button."
+msgid "Insert table"
+msgstr "Вставить таблицу"
+
+msgctxt "Label for the set/unset table header column button."
+msgid "Header column"
+msgstr "Столбец заголовков"
+
+msgctxt "Label for the insert table column to the left of the current one button."
+msgid "Insert column left"
+msgstr "Вставить столбец слева"
+
+msgctxt "Label for the insert table column to the right of the current one button."
+msgid "Insert column right"
+msgstr "Вставить столбец справа"
+
+msgctxt "Label for the delete table column button."
+msgid "Delete column"
+msgstr "Удалить столбец"
+
+msgctxt "Label for the remove border button."
+msgid "Remove border"
+msgstr "Убрать границы"
+
+msgctxt "Label for the remove inner border button."
+msgid "Inner border"
+msgstr "Внутренние границы"
+
+msgctxt "Label for the remove outer border button."
+msgid "Outer border"
+msgstr "Внешние границы"
+
+msgctxt "Label for the table column dropdown button."
+msgid "Column"
+msgstr "Столбец"
+
+msgctxt "Label for the set/unset table header row button."
+msgid "Header row"
+msgstr "Строка заголовков"
+
+msgctxt "Label for the insert row below button."
+msgid "Insert row below"
+msgstr "Вставить строку ниже"
+
+msgctxt "Label for the insert row above button."
+msgid "Insert row above"
+msgstr "Вставить строку выше"
+
+msgctxt "Label for the delete table row button."
+msgid "Delete row"
+msgstr "Удалить строку"
+
+msgctxt "Label for the table row dropdown button."
+msgid "Row"
+msgstr "Строка"
+
+msgctxt "Label for the table border dropdown button."
+msgid "Border"
+msgstr "Границы"
+
+msgctxt "Label for the table align dropdown button."
+msgid "Align"
+msgstr "Выравнивание"
+
+msgctxt "Label for the merge table cell up button."
+msgid "Merge cell up"
+msgstr "Объединить с ячейкой сверху"
+
+msgctxt "Label for the merge table cell right button."
+msgid "Merge cell right"
+msgstr "Объединить с ячейкой справа"
+
+msgctxt "Label for the merge table cell down button."
+msgid "Merge cell down"
+msgstr "Объединить с ячейкой снизу"
+
+msgctxt "Label for the merge table cell left button."
+msgid "Merge cell left"
+msgstr "Объединить с ячейкой слева"
+
+msgctxt "Label for the split table cell vertically button."
+msgid "Split cell vertically"
+msgstr "Разделить ячейку вертикально"
+
+msgctxt "Label for the split table cell horizontally button."
+msgid "Split cell horizontally"
+msgstr "Разделить ячейку горизонтально"
+
+msgctxt "Label for the merge table cells button."
+msgid "Merge cells"
+msgstr "Объединить ячейки"
+
+msgctxt "Label for table horizontal align."
+msgid "Table Align"
+msgstr "Выравнивание таблицы"
+
+msgctxt "Label for vertical text align in the cell."
+msgid "Cell Text Align"
+msgstr "Положение текста в ячейке"
+
+msgctxt "Label for the cell top position."
+msgid "Cell Text Align Top"
+msgstr "Верхнее положенее"
+
+msgctxt "Label for the cell center position."
+msgid "Cell Text Align Center"
+msgstr "Центральное положение"
+
+msgctxt "Label for the cell baseline position."
+msgid "Cell Text Align Baseline"
+msgstr "Положение по умолчанию"
+
+msgctxt "Label for the cell bottom position."
+msgid "Cell Text Align Bottom"
+msgstr "Нижнее положение"
