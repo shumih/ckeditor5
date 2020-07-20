@@ -51,7 +51,7 @@ export default class Clipboard extends Plugin {
      * @private
      * @member {module:engine/dataprocessor/htmldataprocessor~HtmlDataProcessor} #_htmlDataProcessor
      */
-    this._htmlDataProcessor = new HtmlDataProcessor();
+    this._htmlDataProcessor = new HtmlDataProcessor(viewDocument);
 
     if (env.isIe11) {
       view.addObserver(IEClipboardObserver);
