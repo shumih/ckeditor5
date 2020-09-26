@@ -19,7 +19,12 @@
       editor.execute('insertTemplateBlock', window.templateBlocks[0]);
     }
 
-		editor.setData(localStorage.getItem('editor-data'))
+		var editorData = localStorage.getItem('editor-data')
+
+		if (editorData) {
+			editor.setData(editorData)
+		}
+
     contentEl.innerHTML = editor.getData();
     editor.model.document.on('change:data', function() {
     	var editorData = editor.getData();

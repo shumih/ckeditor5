@@ -35,23 +35,23 @@ export default class LineHeightEditing extends Plugin {
     });
 
     // Define view to model conversion.
-    const options = normalizeOptions(this.editor.config.get('lineHeight.options')).filter(item => item.model);
+		const configOptions = this.editor.config.get([LINE_HEIGHT, 'options'].join('.'));
+    const options = normalizeOptions(configOptions);
     const attributeToElementDefinition = buildDefinition(LINE_HEIGHT, options);
 
     // Set-up the two-way conversion.
     editor.conversion.attributeToElement(attributeToElementDefinition);
 
-    editor.conversion.attributeToAttribute({
-      view: {
-        key: 'class',
-        value: 'ck-line-height-wrapper',
-      },
-      model: {
-        key: LINE_HEIGHT_WRAPPER,
-        value: true,
-      },
-      converterPriority: 'high',
-    });
+    const attributeToAttributeDefinition = {
+			model: { key: LINE_HEIGHT_WRAPPER, values: configOptions },
+			view: options.reduce((result, option) => {
+
+				result[option.title] = { key: 'style', value: { 'line-height': option.model } };
+
+				return result
+			}, {}),
+		}
+		editor.conversion.attributeToAttribute(attributeToAttributeDefinition);
 
     // Add LineHeight command.
     editor.commands.add(LINE_HEIGHT, new LineHeightCommand(editor));

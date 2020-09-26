@@ -60,7 +60,7 @@ export default class LineHeightCommand extends FontCommand {
 
       for (const block of blocks) {
         if (value) {
-          writer.setAttribute(LINE_HEIGHT_WRAPPER, true, block);
+          writer.setAttribute(LINE_HEIGHT_WRAPPER, value, block);
         } else {
           writer.removeAttribute(LINE_HEIGHT_WRAPPER, block);
         }

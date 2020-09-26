@@ -1,5 +1,5 @@
 import './src/style.css';
-import config from './ckeditor-config';
+import config from './src/ckeditor-config';
 import ClassicEditor from './src/ckeditor';
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
