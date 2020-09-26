@@ -9,7 +9,7 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import LineHeightCommand from './lineheightcommand';
-import { LINE_HEIGHT, buildDefinition, LINE_HEIGHT_WRAPPER } from '../utils';
+import { LINE_HEIGHT, buildDefinition, buildAttributeDefinition, LINE_HEIGHT_WRAPPER } from '../utils';
 import { normalizeOptions } from './utils';
 
 /**
@@ -38,19 +38,10 @@ export default class LineHeightEditing extends Plugin {
 		const configOptions = this.editor.config.get([LINE_HEIGHT, 'options'].join('.'));
     const options = normalizeOptions(configOptions);
     const attributeToElementDefinition = buildDefinition(LINE_HEIGHT, options);
+    const attributeToAttributeDefinition = buildAttributeDefinition(LINE_HEIGHT_WRAPPER, 'line-height', configOptions);
 
     // Set-up the two-way conversion.
     editor.conversion.attributeToElement(attributeToElementDefinition);
-
-    const attributeToAttributeDefinition = {
-			model: { key: LINE_HEIGHT_WRAPPER, values: configOptions },
-			view: options.reduce((result, option) => {
-
-				result[option.title] = { key: 'style', value: { 'line-height': option.model } };
-
-				return result
-			}, {}),
-		}
 		editor.conversion.attributeToAttribute(attributeToAttributeDefinition);
 
     // Add LineHeight command.

@@ -69,6 +69,27 @@ export function buildDefinition(modelAttributeKey, options) {
   return definition;
 }
 
+export function buildAttributeDefinition(modelAttributeKey, styleKey, options) {
+  const definition = {
+    model: {
+      key: modelAttributeKey,
+      values: options.slice(),
+    },
+    view: {},
+  };
+
+  for (const option of options) {
+    definition.view[option] = {
+      key: 'style',
+      value: {
+        [styleKey]: option,
+      },
+    };
+  }
+
+  return definition;
+}
+
 /**
  * A {@link module:font/fontcolor~FontColor font color} and
  * {@link module:font/fontbackgroundcolor~FontBackgroundColor font background color} helper
