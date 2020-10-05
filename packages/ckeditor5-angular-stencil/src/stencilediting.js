@@ -63,6 +63,15 @@ export default class StencilEditing extends Plugin {
     const { blocks, createBlock } = editor.config.get('stencil');
     const blockSelectorToDescriptors = {};
 
+		conversion.for('dataDowncast').elementToElement({
+			model: 'stencilTemplatePreview',
+			view: (modelItem, viewWriter) =>
+				viewWriter.createContainerElement(modelItem.getAttribute('selector'), {
+					class: 'stencil-template',
+					style: getInlineStyles(modelItem),
+				}),
+		});
+
     blocks.forEach(({ selector, descriptors }) => {
       blockSelectorToDescriptors[selector] = descriptors;
 
@@ -78,15 +87,6 @@ export default class StencilEditing extends Plugin {
             ...parseModelStyles(viewElement),
           });
         },
-      });
-
-      conversion.for('dataDowncast').elementToElement({
-        model: 'stencilTemplatePreview',
-        view: (modelItem, viewWriter) =>
-          viewWriter.createContainerElement(selector, {
-            class: 'stencil-template',
-            style: getInlineStyles(modelItem),
-          }),
       });
 
       schema.extend('stencilTemplatePreview', {

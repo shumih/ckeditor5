@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -26,30 +26,30 @@ import multipleStylesSingleLineModel from './multiple-styles-single-line/model.w
 import multipleStylesMultilineModel from './multiple-styles-multiline/model.word2016.html';
 
 export const fixtures = {
-  input: {
-    boldWithinText,
-    italicStartingText,
-    underlinedText,
-    strikethroughEndingText,
-    multipleStylesSingleLine,
-    multipleStylesMultiline,
-  },
-  normalized: {
-    boldWithinText: boldWithinTextNormalized,
-    italicStartingText: italicStartingTextNormalized,
-    underlinedText: underlinedTextNormalized,
-    strikethroughEndingText: strikethroughEndingTextNormalized,
-    multipleStylesSingleLine: multipleStylesSingleLineNormalized,
-    multipleStylesMultiline: multipleStylesMultilineNormalized,
-  },
-  model: {
-    boldWithinText: boldWithinTextModel,
-    italicStartingText: italicStartingTextModel,
-    underlinedText: underlinedTextModel,
-    strikethroughEndingText: strikethroughEndingTextModel,
-    multipleStylesSingleLine: multipleStylesSingleLineModel,
-    multipleStylesMultiline: multipleStylesMultilineModel,
-  },
+	input: {
+		boldWithinText,
+		italicStartingText,
+		underlinedText,
+		strikethroughEndingText,
+		multipleStylesSingleLine,
+		multipleStylesMultiline
+	},
+	normalized: {
+		boldWithinText: boldWithinTextNormalized,
+		italicStartingText: italicStartingTextNormalized,
+		underlinedText: underlinedTextNormalized,
+		strikethroughEndingText: strikethroughEndingTextNormalized,
+		multipleStylesSingleLine: multipleStylesSingleLineNormalized,
+		multipleStylesMultiline: multipleStylesMultilineNormalized
+	},
+	model: {
+		boldWithinText: boldWithinTextModel,
+		italicStartingText: italicStartingTextModel,
+		underlinedText: underlinedTextModel,
+		strikethroughEndingText: strikethroughEndingTextModel,
+		multipleStylesSingleLine: multipleStylesSingleLineModel,
+		multipleStylesMultiline: multipleStylesMultilineModel
+	}
 };
 
 // Safari.
@@ -68,30 +68,30 @@ import multipleStylesSingleLineNormalizedSafari from './multiple-styles-single-l
 import multipleStylesMultilineNormalizedSafari from './multiple-styles-multiline/normalized.safari.word2016.html';
 
 export const browserFixtures = {
-  safari: {
-    input: {
-      boldWithinText: boldWithinTextSafari,
-      italicStartingText: italicStartingTextSafari,
-      underlinedText: underlinedTextSafari,
-      strikethroughEndingText: strikethroughEndingTextSafari,
-      multipleStylesSingleLine: multipleStylesSingleLineSafari,
-      multipleStylesMultiline: multipleStylesMultilineSafari,
-    },
-    normalized: {
-      boldWithinText: boldWithinTextNormalizedSafari,
-      italicStartingText: italicStartingTextNormalizedSafari,
-      underlinedText: underlinedTextNormalizedSafari,
-      strikethroughEndingText: strikethroughEndingTextNormalizedSafari,
-      multipleStylesSingleLine: multipleStylesSingleLineNormalizedSafari,
-      multipleStylesMultiline: multipleStylesMultilineNormalizedSafari,
-    },
-    model: {
-      boldWithinText: boldWithinTextModel,
-      italicStartingText: italicStartingTextModel,
-      underlinedText: underlinedTextModel,
-      strikethroughEndingText: strikethroughEndingTextModel,
-      multipleStylesSingleLine: multipleStylesSingleLineModel,
-      multipleStylesMultiline: multipleStylesMultilineModel,
-    },
-  },
+	safari: {
+		input: {
+			boldWithinText: boldWithinTextSafari,
+			italicStartingText: italicStartingTextSafari,
+			underlinedText: underlinedTextSafari,
+			strikethroughEndingText: strikethroughEndingTextSafari,
+			multipleStylesSingleLine: multipleStylesSingleLineSafari,
+			multipleStylesMultiline: multipleStylesMultilineSafari
+		},
+		normalized: {
+			boldWithinText: boldWithinTextNormalizedSafari,
+			italicStartingText: italicStartingTextNormalizedSafari,
+			underlinedText: underlinedTextNormalizedSafari,
+			strikethroughEndingText: strikethroughEndingTextNormalizedSafari,
+			multipleStylesSingleLine: multipleStylesSingleLineNormalizedSafari,
+			multipleStylesMultiline: multipleStylesMultilineNormalizedSafari
+		},
+		model: {
+			boldWithinText: boldWithinTextModel,
+			italicStartingText: italicStartingTextModel,
+			underlinedText: underlinedTextModel,
+			strikethroughEndingText: strikethroughEndingTextModel,
+			multipleStylesSingleLine: multipleStylesSingleLineModel,
+			multipleStylesMultiline: multipleStylesMultilineModel
+		}
+	}
 };

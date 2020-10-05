@@ -1,91 +1,128 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+import PasteFromOffice from '../src/pastefromoffice';
 import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
 import VirtualTestEditor from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor';
-import DocumentFragment from '@ckeditor/ckeditor5-engine/src/view/documentfragment';
-import testUtils from '@ckeditor/ckeditor5-core/tests/_utils/utils';
-
-import PasteFromOffice from '../src/pastefromoffice';
+import HtmlDataProcessor from '@ckeditor/ckeditor5-engine/src/dataprocessor/htmldataprocessor';
 import { createDataTransfer } from './_utils/utils';
+import testUtils from '@ckeditor/ckeditor5-core/tests/_utils/utils';
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import { StylesProcessor } from '@ckeditor/ckeditor5-engine/src/view/stylesmap';
+import ViewDocument from '@ckeditor/ckeditor5-engine/src/view/document';
 
-describe('Paste from Office plugin', () => {
-  let editor, content, normalizeSpy;
+describe( 'PasteFromOffice', () => {
+	const htmlDataProcessor = new HtmlDataProcessor( new ViewDocument( new StylesProcessor() ) );
+	let editor, pasteFromOffice, clipboard;
 
-  testUtils.createSinonSandbox();
+	testUtils.createSinonSandbox();
 
-  before(() => {
-    content = new DocumentFragment();
-  });
+	beforeEach( () => {
+		return VirtualTestEditor.create( {
+			plugins: [ PasteFromOffice, Paragraph ]
+		} )
+			.then( _editor => {
+				editor = _editor;
+				pasteFromOffice = editor.plugins.get( 'PasteFromOffice' );
+				clipboard = editor.plugins.get( 'Clipboard' );
+			} );
+	} );
 
-  beforeEach(() => {
-    return VirtualTestEditor.create({
-      plugins: [Clipboard, PasteFromOffice],
-    }).then(newEditor => {
-      editor = newEditor;
-      normalizeSpy = testUtils.sinon.spy(editor.plugins.get('PasteFromOffice'), '_normalizeWordInput');
-    });
-  });
+	it( 'should be loaded', () => {
+		expect( pasteFromOffice ).to.be.instanceOf( PasteFromOffice, Paragraph );
+	} );
 
-  it('runs normalizations if Word meta tag detected #1', () => {
-    const dataTransfer = createDataTransfer({
-      'text/html': '<meta name=Generator content="Microsoft Word 15">',
-    });
+	it( 'has proper name', () => {
+		expect( PasteFromOffice.pluginName ).to.equal( 'PasteFromOffice' );
+	} );
 
-    editor.plugins.get('Clipboard').fire('inputTransformation', { content, dataTransfer });
+	it( 'should load Clipboard plugin', () => {
+		expect( editor.plugins.get( Clipboard ) ).to.be.instanceOf( Clipboard );
+	} );
 
-    expect(normalizeSpy.calledOnce).to.true;
-  });
+	describe( 'isTransformedWithPasteFromOffice - flag', () => {
+		describe( 'data which should be marked with flag', () => {
+			it( 'should process data with microsoft word header', () => {
+				checkCorrectData( '<meta name=Generator content="Microsoft Word 15">' );
+			} );
 
-  it('runs normalizations if Word meta tag detected #2', () => {
-    const dataTransfer = createDataTransfer({
-      'text/html': '<html><head><meta name="Generator"  content=Microsoft Word 15></head></html>',
-    });
+			it( 'should process data with nested microsoft header', () => {
+				checkCorrectData( '<html><head><meta name="Generator"  content=Microsoft Word 15></head></html>' );
+			} );
 
-    editor.plugins.get('Clipboard').fire('inputTransformation', { content, dataTransfer });
+			it( 'should process data from google docs', () => {
+				checkCorrectData( '<p id="docs-internal-guid-12345678-1234-1234-1234-1234567890ab"></p>' );
+			} );
 
-    expect(normalizeSpy.calledOnce).to.true;
-  });
+			function checkCorrectData( inputString ) {
+				const data = setUpData( inputString );
+				const getDataSpy = sinon.spy( data.dataTransfer, 'getData' );
 
-  it('does not normalize the content without Word meta tag', () => {
-    const dataTransfer = createDataTransfer({
-      'text/html': '<meta name=Generator content="Other">',
-    });
+				clipboard.fire( 'inputTransformation', data );
 
-    editor.plugins.get('Clipboard').fire('inputTransformation', { content, dataTransfer });
+				expect( data.isTransformedWithPasteFromOffice ).to.be.true;
+				sinon.assert.called( getDataSpy );
+			}
+		} );
 
-    expect(normalizeSpy.called).to.false;
-  });
+		describe( 'data which should not be marked with flag', () => {
+			it( 'should process data with regular html', () => {
+				checkNotProcessedData( '<p>Hello world</p>' );
+			} );
 
-  it('does not process content many times for the same `inputTransformation` event', () => {
-    const clipboard = editor.plugins.get('Clipboard');
+			it( 'should process data with similar headers to MS Word', () => {
+				checkNotProcessedData( '<meta name=Generator content="Other">' );
+			} );
 
-    const dataTransfer = createDataTransfer({
-      'text/html': '<html><head><meta name="Generator"  content=Microsoft Word 15></head></html>',
-    });
+			function checkNotProcessedData( inputString ) {
+				const data = setUpData( inputString );
+				const getDataSpy = sinon.spy( data.dataTransfer, 'getData' );
 
-    let eventRefired = false;
-    clipboard.on(
-      'inputTransformation',
-      (evt, data) => {
-        if (!eventRefired) {
-          eventRefired = true;
+				clipboard.fire( 'inputTransformation', data );
 
-          evt.stop();
+				expect( data.isTransformedWithPasteFromOffice ).to.be.undefined;
+				sinon.assert.called( getDataSpy );
+			}
+		} );
 
-          clipboard.fire('inputTransformation', data);
-        }
+		describe( 'data which already have the flag', () => {
+			it( 'should not process again ms word data containing a flag', () => {
+				checkAlreadyProcessedData( '<meta name=Generator content="Microsoft Word 15">' +
+					'<p class="MsoNormal">Hello world<o:p></o:p></p>' );
+			} );
 
-        expect(data.pasteFromOfficeProcessed).to.true;
-        expect(normalizeSpy.calledOnce).to.true;
-      },
-      { priority: 'low' }
-    );
+			it( 'should not process again google docs data containing a flag', () => {
+				checkAlreadyProcessedData( '<meta charset="utf-8"><b id="docs-internal-guid-30db46f5-7fff-15a1-e17c-1234567890ab"' +
+					'style="font-weight:normal;"><p dir="ltr">Hello world</p></b>' );
+			} );
 
-    editor.plugins.get('Clipboard').fire('inputTransformation', { content, dataTransfer });
+			function checkAlreadyProcessedData( inputString ) {
+				const data = setUpData( inputString, true );
+				const getDataSpy = sinon.spy( data.dataTransfer, 'getData' );
 
-    expect(normalizeSpy.calledOnce).to.true;
-  });
-});
+				clipboard.fire( 'inputTransformation', data );
+
+				expect( data.isTransformedWithPasteFromOffice ).to.be.true;
+				sinon.assert.notCalled( getDataSpy );
+			}
+		} );
+	} );
+
+	// @param {String} inputString html to be processed by paste from office
+	// @param {Boolean} [isTransformedWithPasteFromOffice=false] if set, marks output data with isTransformedWithPasteFromOffice flag
+	// @returns {Object} data object simulating content obtained from the clipboard
+	function setUpData( inputString, isTransformedWithPasteFromOffice = false ) {
+		const data = {
+			content: htmlDataProcessor.toView( inputString ),
+			dataTransfer: createDataTransfer( { 'text/html': inputString } )
+		};
+
+		if ( isTransformedWithPasteFromOffice ) {
+			data.isTransformedWithPasteFromOffice = true;
+		}
+
+		return data;
+	}
+} );

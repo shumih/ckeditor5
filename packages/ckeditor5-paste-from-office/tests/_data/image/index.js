@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -35,40 +35,40 @@ import onlineOfflineModel from './online-offline/model.word2016.html';
 import shapesOnlineOfflineModel from './shapes-online-offline/model.word2016.html';
 
 const genericFixtures = {
-  input: {
-    offline,
-    linked,
-    rotated,
-    wrapped,
-    alternativeText,
-    reflection,
-    adjacentGroups,
-    onlineOffline,
-    shapesOnlineOffline,
-  },
-  normalized: {
-    offline: offlineNormalized,
-    linked: linkedNormalized,
-    rotated: rotatedNormalized,
-    wrapped: wrappedNormalized,
-    alternativeText: alternativeTextNormalized,
-    reflection: reflectionNormalized,
-    adjacentGroups: adjacentGroupsNormalized,
-    onlineOffline: onlineOfflineNormalized,
-    shapesOnlineOffline: shapesOnlineOfflineNormalized,
-  },
-  model: {
-    offline: offlineModel,
-    linked: linkedModel,
-    rotated: rotatedModel,
-    wrapped: wrappedModel,
-    alternativeText: alternativeTextModel,
-    reflection: reflectionModel,
-    adjacentGroups: adjacentGroupsModel,
-    onlineOffline: onlineOfflineModel,
-    shapesOnlineOffline: shapesOnlineOfflineModel,
-  },
-  inputBlob: {},
+	input: {
+		offline,
+		linked,
+		rotated,
+		wrapped,
+		alternativeText,
+		reflection,
+		adjacentGroups,
+		onlineOffline,
+		shapesOnlineOffline
+	},
+	normalized: {
+		offline: offlineNormalized,
+		linked: linkedNormalized,
+		rotated: rotatedNormalized,
+		wrapped: wrappedNormalized,
+		alternativeText: alternativeTextNormalized,
+		reflection: reflectionNormalized,
+		adjacentGroups: adjacentGroupsNormalized,
+		onlineOffline: onlineOfflineNormalized,
+		shapesOnlineOffline: shapesOnlineOfflineNormalized
+	},
+	model: {
+		offline: offlineModel,
+		linked: linkedModel,
+		rotated: rotatedModel,
+		wrapped: wrappedModel,
+		alternativeText: alternativeTextModel,
+		reflection: reflectionModel,
+		adjacentGroups: adjacentGroupsModel,
+		onlineOffline: onlineOfflineModel,
+		shapesOnlineOffline: shapesOnlineOfflineModel
+	},
+	inputBlob: {}
 };
 
 export const fixtures = genericFixtures;
@@ -142,93 +142,94 @@ import onlineOfflineModelSafari from './online-offline/model.safari.word2016.htm
 import shapesOnlineOfflineModelSafari from './shapes-online-offline/model.safari.word2016.html';
 
 export const browserFixtures = {
-  chrome: {
-    input: Object.assign({}, genericFixtures.input),
-    normalized: Object.assign({}, genericFixtures.normalized),
-    model: Object.assign({}, genericFixtures.model),
-    inputRtf: {
-      offline: offlineRtfChrome,
-      linked: linkedRtfChrome,
-      rotated: rotatedRtfChrome,
-      wrapped: wrappedRtfChrome,
-      alternativeText: alternativeTextRtfChrome,
-      reflection: reflectionRtfChrome,
-      adjacentGroups: adjacentGroupsRtfChrome,
-      onlineOffline: onlineOfflineRtfChrome,
-      shapesOnlineOffline: shapesOnlineOfflineRtfChrome,
-    },
-  },
+	chrome: {
+		input: Object.assign( {}, genericFixtures.input ),
+		normalized: Object.assign( {}, genericFixtures.normalized ),
+		model: Object.assign( {}, genericFixtures.model ),
+		inputRtf: {
+			offline: offlineRtfChrome,
+			linked: linkedRtfChrome,
+			rotated: rotatedRtfChrome,
+			wrapped: wrappedRtfChrome,
+			alternativeText: alternativeTextRtfChrome,
+			reflection: reflectionRtfChrome,
+			adjacentGroups: adjacentGroupsRtfChrome,
+			onlineOffline: onlineOfflineRtfChrome,
+			shapesOnlineOffline: shapesOnlineOfflineRtfChrome
+		}
 
-  firefox: {
-    input: Object.assign({}, genericFixtures.input),
-    normalized: Object.assign({}, genericFixtures.normalized),
-    model: Object.assign({}, genericFixtures.model),
-    inputRtf: {
-      offline: offlineRtfFirefox,
-      linked: linkedRtfFirefox,
-      rotated: rotatedRtfFirefox,
-      wrapped: wrappedRtfFirefox,
-      alternativeText: alternativeTextRtfFirefox,
-      reflection: reflectionRtfFirefox,
-      adjacentGroups: adjacentGroupsRtfFirefox,
-      onlineOffline: onlineOfflineRtfFirefox,
-      shapesOnlineOffline: shapesOnlineOfflineRtfFirefox,
-    },
-  },
+	},
 
-  edge: {
-    input: Object.assign({}, genericFixtures.input),
-    normalized: Object.assign({}, genericFixtures.normalized),
-    model: Object.assign({}, genericFixtures.model, {
-      adjacentGroups: adjacentGroupsModelEdge,
-    }),
-    inputRtf: {
-      offline: offlineRtfEdge,
-      linked: linkedRtfEdge,
-      rotated: rotatedRtfEdge,
-      wrapped: wrappedRtfEdge,
-      alternativeText: alternativeTextRtfEdge,
-      reflection: reflectionRtfEdge,
-      adjacentGroups: adjacentGroupsRtfEdge,
-      onlineOffline: onlineOfflineRtfEdge,
-      shapesOnlineOffline: shapesOnlineOfflineRtfEdge,
-    },
-  },
+	firefox: {
+		input: Object.assign( {}, genericFixtures.input ),
+		normalized: Object.assign( {}, genericFixtures.normalized ),
+		model: Object.assign( {}, genericFixtures.model ),
+		inputRtf: {
+			offline: offlineRtfFirefox,
+			linked: linkedRtfFirefox,
+			rotated: rotatedRtfFirefox,
+			wrapped: wrappedRtfFirefox,
+			alternativeText: alternativeTextRtfFirefox,
+			reflection: reflectionRtfFirefox,
+			adjacentGroups: adjacentGroupsRtfFirefox,
+			onlineOffline: onlineOfflineRtfFirefox,
+			shapesOnlineOffline: shapesOnlineOfflineRtfFirefox
+		}
+	},
 
-  safari: {
-    input: {
-      offline: offlineSafari,
-      linked: linkedSafari,
-      rotated: rotatedSafari,
-      wrapped: wrappedSafari,
-      alternativeText: alternativeTextSafari,
-      reflection: reflectionSafari,
-      adjacentGroups: adjacentGroupsSafari,
-      onlineOffline: onlineOfflineSafari,
-      shapesOnlineOffline: shapesOnlineOfflineSafari,
-    },
-    normalized: {
-      offline: offlineNormalizedSafari,
-      linked: linkedNormalizedSafari,
-      rotated: rotatedNormalizedSafari,
-      wrapped: wrappedNormalizedSafari,
-      alternativeText: alternativeTextNormalizedSafari,
-      reflection: reflectionNormalizedSafari,
-      adjacentGroups: adjacentGroupsNormalizedSafari,
-      onlineOffline: onlineOfflineNormalizedSafari,
-      shapesOnlineOffline: shapesOnlineOfflineNormalizedSafari,
-    },
-    model: {
-      offline: offlineModelSafari,
-      linked: linkedModelSafari,
-      rotated: rotatedModelSafari,
-      wrapped: wrappedModelSafari,
-      alternativeText: alternativeTextModelSafari,
-      reflection: reflectionModelSafari,
-      adjacentGroups: adjacentGroupsModelSafari,
-      onlineOffline: onlineOfflineModelSafari,
-      shapesOnlineOffline: shapesOnlineOfflineModelSafari,
-    },
-    inputRtf: {},
-  },
+	edge: {
+		input: Object.assign( {}, genericFixtures.input ),
+		normalized: Object.assign( {}, genericFixtures.normalized ),
+		model: Object.assign( {}, genericFixtures.model, {
+			adjacentGroups: adjacentGroupsModelEdge
+		} ),
+		inputRtf: {
+			offline: offlineRtfEdge,
+			linked: linkedRtfEdge,
+			rotated: rotatedRtfEdge,
+			wrapped: wrappedRtfEdge,
+			alternativeText: alternativeTextRtfEdge,
+			reflection: reflectionRtfEdge,
+			adjacentGroups: adjacentGroupsRtfEdge,
+			onlineOffline: onlineOfflineRtfEdge,
+			shapesOnlineOffline: shapesOnlineOfflineRtfEdge
+		}
+	},
+
+	safari: {
+		input: {
+			offline: offlineSafari,
+			linked: linkedSafari,
+			rotated: rotatedSafari,
+			wrapped: wrappedSafari,
+			alternativeText: alternativeTextSafari,
+			reflection: reflectionSafari,
+			adjacentGroups: adjacentGroupsSafari,
+			onlineOffline: onlineOfflineSafari,
+			shapesOnlineOffline: shapesOnlineOfflineSafari
+		},
+		normalized: {
+			offline: offlineNormalizedSafari,
+			linked: linkedNormalizedSafari,
+			rotated: rotatedNormalizedSafari,
+			wrapped: wrappedNormalizedSafari,
+			alternativeText: alternativeTextNormalizedSafari,
+			reflection: reflectionNormalizedSafari,
+			adjacentGroups: adjacentGroupsNormalizedSafari,
+			onlineOffline: onlineOfflineNormalizedSafari,
+			shapesOnlineOffline: shapesOnlineOfflineNormalizedSafari
+		},
+		model: {
+			offline: offlineModelSafari,
+			linked: linkedModelSafari,
+			rotated: rotatedModelSafari,
+			wrapped: wrappedModelSafari,
+			alternativeText: alternativeTextModelSafari,
+			reflection: reflectionModelSafari,
+			adjacentGroups: adjacentGroupsModelSafari,
+			onlineOffline: onlineOfflineModelSafari,
+			shapesOnlineOffline: shapesOnlineOfflineModelSafari
+		},
+		inputRtf: {}
+	}
 };

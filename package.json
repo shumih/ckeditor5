@@ -54,7 +54,7 @@
     "@ckeditor/ckeditor5-media-embed": "file:./packages/ckeditor5-media-embed",
     "@ckeditor/ckeditor5-mention": "^10.0.0",
     "@ckeditor/ckeditor5-paragraph": "^11.0.1",
-    "@ckeditor/ckeditor5-paste-from-office": "^11.0.1",
+    "@ckeditor/ckeditor5-paste-from-office": "file:./packages/ckeditor5-paste-from-office",
     "@ckeditor/ckeditor5-remove-format": "^10.0.0",
     "@ckeditor/ckeditor5-table": "file:./packages/ckeditor5-table",
     "@ckeditor/ckeditor5-theme-lark": "^13.0.1",
@@ -94,8 +94,7 @@
     "svgo": "^1.1.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "umberto": "^0.22.0",
-    "unorm": "^1.5.0",
-    "webpack": "^4.15.0"
+    "unorm": "^1.5.0"
   },
   "engines": {
     "node": ">=8.0.0",
@@ -128,8 +127,8 @@
     "release:stable-branches": "sh ./scripts/update-stable-branches.sh",
     "switch-to-dev-dev": "sh ./scripts/switch-to-dev-dev.sh",
     "clean-up-svg-icons": "sh ./scripts/clean-up-svg-icons.sh",
-	"start:classic": "npm run start --prefix ./packages/ckeditor5-build-classic",
-	"start:classic:ie": "npm run start:ie --prefix ./packages/ckeditor5-build-classic"
+    "start:classic": "npm run start --prefix ./packages/ckeditor5-build-classic",
+    "start:classic:ie": "npm run start:ie --prefix ./packages/ckeditor5-build-classic"
   },
   "workspaces": {
     "packages": [

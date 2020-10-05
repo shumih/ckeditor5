@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -9,79 +9,68 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
-import { parseHtml } from './filters/parse';
-import { transformListItemLikeElementsIntoLists } from './filters/list';
-import { replaceImagesSourceWithBase64 } from './filters/image';
+import GoogleDocsNormalizer from './normalizers/googledocsnormalizer';
+import MSWordNormalizer from './normalizers/mswordnormalizer';
+import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
 
 /**
  * The Paste from Office plugin.
  *
- * This plugin handles content pasted from Office apps (for now only Word) and transforms it (if necessary)
+ * This plugin handles content pasted from Office apps and transforms it (if necessary)
  * to a valid structure which can then be understood by the editor features.
+ *
+ * Transformation is made by a set of predefined {@link module:paste-from-office/normalizer~Normalizer normalizers}.
+ * This plugin includes following normalizers:
+ *   * {@link module:paste-from-office/normalizers/mswordnormalizer~MSWordNormalizer Microsoft Word normalizer}
+ *   * {@link module:paste-from-office/normalizers/googledocsnormalizer~GoogleDocsNormalizer Google Docs normalizer}
  *
  * For more information about this feature check the {@glink api/paste-from-office package page}.
  *
  * @extends module:core/plugin~Plugin
  */
 export default class PasteFromOffice extends Plugin {
-  /**
-   * @inheritDoc
-   */
-  static get pluginName() {
-    return 'PasteFromOffice';
-  }
+	/**
+	 * @inheritDoc
+	 */
+	static get pluginName() {
+		return 'PasteFromOffice';
+	}
 
-  /**
-   * @inheritDoc
-   */
-  init() {
-    const editor = this.editor;
+	/**
+	 * @inheritDoc
+	 */
+	static get requires() {
+		return [ Clipboard ];
+	}
 
-    this.listenTo(
-      editor.plugins.get('Clipboard'),
-      'inputTransformation',
-      (evt, data) => {
-        const html = data.dataTransfer.getData('text/html');
+	/**
+	 * @inheritDoc
+	 */
+	init() {
+		const editor = this.editor;
+		const viewDocument = editor.editing.view.document;
+		const normalizers = [];
 
-        if (data.pasteFromOfficeProcessed !== true && isWordInput(html)) {
-          data.content = this._normalizeWordInput(html, data.dataTransfer);
+		normalizers.push( new MSWordNormalizer( viewDocument ) );
+		normalizers.push( new GoogleDocsNormalizer( viewDocument ) );
 
-          // Set the flag so if `inputTransformation` is re-fired, PFO will not process it again (#44).
-          data.pasteFromOfficeProcessed = true;
-        }
-      },
-      { priority: 'high' }
-    );
-  }
+		editor.plugins.get( 'Clipboard' ).on(
+			'inputTransformation',
+			( evt, data ) => {
+				if ( data.isTransformedWithPasteFromOffice ) {
+					return;
+				}
 
-  /**
-   * Normalizes input pasted from Word to format suitable for editor {@link module:engine/model/model~Model}.
-   *
-   * **Note**: this function was exposed mainly for testing purposes and should not be called directly.
-   *
-   * @protected
-   * @param {String} input Word input.
-   * @param {module:clipboard/datatransfer~DataTransfer} dataTransfer Data transfer instance.
-   * @returns {module:engine/view/documentfragment~DocumentFragment} Normalized input.
-   */
-  _normalizeWordInput(input, dataTransfer) {
-    const { body, stylesString } = parseHtml(input);
+				const htmlString = data.dataTransfer.getData( 'text/html' );
+				const activeNormalizer = normalizers.find( normalizer => normalizer.isActive( htmlString ) );
 
-    transformListItemLikeElementsIntoLists(body, stylesString);
-    replaceImagesSourceWithBase64(body, dataTransfer.getData('text/rtf'));
+				if ( activeNormalizer ) {
+					activeNormalizer.execute( data );
 
-    return body;
-  }
-}
-
-// Checks if given HTML string is a result of pasting content from Word.
-//
-// @param {String} html HTML string to test.
-// @returns {Boolean} True if given HTML string is a Word HTML.
-function isWordInput(html) {
-  return !!(
-    html &&
-    (html.match(/<meta\s*name="?generator"?\s*content="?microsoft\s*word\s*\d+"?\/?>/gi) ||
-      html.match(/xmlns:o="urn:schemas-microsoft-com/gi))
-  );
+					data.isTransformedWithPasteFromOffice = true;
+				}
+			},
+			{ priority: 'high' }
+		);
+	}
 }

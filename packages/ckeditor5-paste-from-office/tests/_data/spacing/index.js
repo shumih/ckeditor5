@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -17,21 +17,21 @@ import singleLineModel from './single-line/model.word2016.html';
 import multiLineModel from './multi-line/model.word2016.html';
 
 export const fixtures = {
-  input: {
-    simple,
-    singleLine,
-    multiLine,
-  },
-  normalized: {
-    simple: simpleNormalized,
-    singleLine: singleLineNormalized,
-    multiLine: multiLineNormalized,
-  },
-  model: {
-    simple: simpleModel,
-    singleLine: singleLineModel,
-    multiLine: multiLineModel,
-  },
+	input: {
+		simple,
+		singleLine,
+		multiLine
+	},
+	normalized: {
+		simple: simpleNormalized,
+		singleLine: singleLineNormalized,
+		multiLine: multiLineNormalized
+	},
+	model: {
+		simple: simpleModel,
+		singleLine: singleLineModel,
+		multiLine: multiLineModel
+	}
 };
 
 // Safari.
@@ -44,21 +44,21 @@ import singleLineNormalizedSafari from './single-line/normalized.safari.word2016
 import multiLineNormalizedSafari from './multi-line/normalized.safari.word2016.html';
 
 export const browserFixtures = {
-  safari: {
-    input: {
-      simple: simpleSafari,
-      singleLine: singleLineSafari,
-      multiLine: multiLineSafari,
-    },
-    normalized: {
-      simple: simpleNormalizedSafari,
-      singleLine: singleLineNormalizedSafari,
-      multiLine: multiLineNormalizedSafari,
-    },
-    model: {
-      simple: simpleModel,
-      singleLine: singleLineModel,
-      multiLine: multiLineModel,
-    },
-  },
+	safari: {
+		input: {
+			simple: simpleSafari,
+			singleLine: singleLineSafari,
+			multiLine: multiLineSafari
+		},
+		normalized: {
+			simple: simpleNormalizedSafari,
+			singleLine: singleLineNormalizedSafari,
+			multiLine: multiLineNormalizedSafari
+		},
+		model: {
+			simple: simpleModel,
+			singleLine: singleLineModel,
+			multiLine: multiLineModel
+		}
+	}
 };

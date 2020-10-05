@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -17,21 +17,21 @@ import combinedModel from './combined/model.word2016.html';
 import twoLineModel from './two-line/model.word2016.html';
 
 export const fixtures = {
-  input: {
-    withinText,
-    combined,
-    twoLine,
-  },
-  normalized: {
-    withinText: withinTextNormalized,
-    combined: combinedNormalized,
-    twoLine: twoLineNormalized,
-  },
-  model: {
-    withinText: withinTextModel,
-    combined: combinedModel,
-    twoLine: twoLineModel,
-  },
+	input: {
+		withinText,
+		combined,
+		twoLine
+	},
+	normalized: {
+		withinText: withinTextNormalized,
+		combined: combinedNormalized,
+		twoLine: twoLineNormalized
+	},
+	model: {
+		withinText: withinTextModel,
+		combined: combinedModel,
+		twoLine: twoLineModel
+	}
 };
 
 // Safari.
@@ -44,21 +44,21 @@ import combinedNormalizedSafari from './combined/normalized.safari.word2016.html
 import twoLineNormalizedSafari from './two-line/normalized.safari.word2016.html';
 
 export const browserFixtures = {
-  safari: {
-    input: {
-      withinText: withinTextSafari,
-      combined: combinedSafari,
-      twoLine: twoLineSafari,
-    },
-    normalized: {
-      withinText: withinTextNormalizedSafari,
-      combined: combinedNormalizedSafari,
-      twoLine: twoLineNormalizedSafari,
-    },
-    model: {
-      withinText: withinTextModel,
-      combined: combinedModel,
-      twoLine: twoLineModel,
-    },
-  },
+	safari: {
+		input: {
+			withinText: withinTextSafari,
+			combined: combinedSafari,
+			twoLine: twoLineSafari
+		},
+		normalized: {
+			withinText: withinTextNormalizedSafari,
+			combined: combinedNormalizedSafari,
+			twoLine: twoLineNormalizedSafari
+		},
+		model: {
+			withinText: withinTextModel,
+			combined: combinedModel,
+			twoLine: twoLineModel
+		}
+	}
 };

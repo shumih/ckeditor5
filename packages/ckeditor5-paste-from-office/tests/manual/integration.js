@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -13,58 +13,57 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+
 import PasteFromOffice from '../../src/pastefromoffice';
 
 import { stringify as stringifyView } from '@ckeditor/ckeditor5-engine/src/dev-utils/view';
 
 import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config';
 
-const htmlDiv = document.querySelector('#html');
-const textDiv = document.querySelector('#text');
-const dataDiv = document.querySelector('#data');
+const htmlDiv = document.querySelector( '#html' );
+const textDiv = document.querySelector( '#text' );
+const dataDiv = document.querySelector( '#data' );
 
-ClassicEditor.create(document.querySelector('#editor'), {
-  plugins: [ArticlePluginSet, Strikethrough, Underline, Table, TableToolbar, EasyImage, PasteFromOffice],
-  toolbar: [
-    'heading',
-    '|',
-    'bold',
-    'italic',
-    'strikethrough',
-    'underline',
-    'link',
-    'bulletedList',
-    'numberedList',
-    'blockQuote',
-    'insertTable',
-    'undo',
-    'redo',
-  ],
-  cloudServices: CS_CONFIG,
-})
-  .then(editor => {
-    window.editor = editor;
-    const clipboard = editor.plugins.get('Clipboard');
+ClassicEditor
+	.create( document.querySelector( '#editor' ), {
+		plugins: [ ArticlePluginSet, Strikethrough, Underline, Table, TableToolbar, PageBreak,
+			TableProperties, TableCellProperties, EasyImage, PasteFromOffice, FontColor, FontBackgroundColor ],
+		toolbar: [ 'heading', '|', 'bold', 'italic', 'strikethrough', 'underline', 'link',
+			'bulletedList', 'numberedList', 'blockQuote', 'insertTable', 'pageBreak', 'undo', 'redo' ],
+		table: {
+			contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties' ]
+		},
+		cloudServices: CS_CONFIG
+	} )
+	.then( editor => {
+		window.editor = editor;
 
-    editor.editing.view.document.on('paste', (evt, data) => {
-      console.clear();
+		const clipboard = editor.plugins.get( 'Clipboard' );
 
-      console.log('----- paste -----');
-      console.log(data);
-      console.log('text/html\n', data.dataTransfer.getData('text/html'));
-      console.log('text/plain\n', data.dataTransfer.getData('text/plain'));
+		editor.editing.view.document.on( 'paste', ( evt, data ) => {
+			console.clear();
 
-      htmlDiv.innerText = data.dataTransfer.getData('text/html');
-      textDiv.innerText = data.dataTransfer.getData('text/plain');
-    });
+			console.log( '----- paste -----' );
+			console.log( data );
+			console.log( 'text/html\n', data.dataTransfer.getData( 'text/html' ) );
+			console.log( 'text/plain\n', data.dataTransfer.getData( 'text/plain' ) );
 
-    clipboard.on('inputTransformation', (evt, data) => {
-      console.log('----- clipboardInput -----');
-      console.log('stringify( data.dataTransfer )\n', stringifyView(data.content));
+			htmlDiv.innerText = data.dataTransfer.getData( 'text/html' );
+			textDiv.innerText = data.dataTransfer.getData( 'text/plain' );
+		} );
 
-      dataDiv.innerText = stringifyView(data.content);
-    });
-  })
-  .catch(err => {
-    console.error(err.stack);
-  });
+		clipboard.on( 'inputTransformation', ( evt, data ) => {
+			console.log( '----- clipboardInput -----' );
+			console.log( 'stringify( data.dataTransfer )\n', stringifyView( data.content ) );
+
+			dataDiv.innerText = stringifyView( data.content );
+		} );
+	} )
+	.catch( err => {
+		console.error( err.stack );
+	} );
