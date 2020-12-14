@@ -1,6 +1,6 @@
 {
   "name": "@shumih/ckeditor-ie",
-  "version": "19.1.0",
+  "version": "19.1.2",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -44,7 +44,7 @@
     "uglifyjs-webpack-plugin": "^1.2.7",
     "unorm": "^1.6.0",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.1"
   },
   "engines": {

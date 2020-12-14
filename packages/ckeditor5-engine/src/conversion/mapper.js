@@ -537,39 +537,39 @@ export default class Mapper {
    * @returns {module:engine/view/position~Position} Found position.
    */
   _findPositionIn(viewParent, expectedOffset) {
-    // Last scanned view node.
-    let viewNode;
-    // Length of the last scanned view node.
-    let lastLength = 0;
+	// Last scanned view node.
+	let viewNode;
+	// Length of the last scanned view node.
+	let lastLength = 0;
 
-    let modelOffset = 0;
-    let viewOffset = 0;
+	let modelOffset = 0;
+	let viewOffset = 0;
 
-    // In the text node it is simple: offset in the model equals offset in the text.
-    if (viewParent.is('text')) {
-      return new ViewPosition(viewParent, expectedOffset);
-    }
+	// In the text node it is simple: offset in the model equals offset in the text.
+	if ( viewParent.is( '$text' ) ) {
+	  return new ViewPosition( viewParent, expectedOffset );
+	}
 
-    // In other cases we add lengths of child nodes to find the proper offset.
+	// In other cases we add lengths of child nodes to find the proper offset.
 
-    // If it is smaller we add the length.
-    while (modelOffset < expectedOffset) {
-      viewNode = viewParent.getChild(viewOffset);
-      lastLength = this.getModelLength(viewNode);
-      modelOffset += lastLength;
-      viewOffset++;
-    }
+	// If it is smaller we add the length.
+	while ( modelOffset < expectedOffset ) {
+	  viewNode = viewParent.getChild( viewOffset );
+	  lastLength = this.getModelLength( viewNode );
+	  modelOffset += lastLength;
+	  viewOffset++;
+	}
 
-    // If it equals we found the position.
-    if (modelOffset == expectedOffset) {
-      return this._moveViewPositionToTextNode(new ViewPosition(viewParent, viewOffset));
-    }
-    // If it is higher we need to enter last child.
-    else {
-      // ( modelOffset - lastLength ) is the offset to the child we enter,
-      // so we subtract it from the expected offset to fine the offset in the child.
-      return this._findPositionIn(viewNode, expectedOffset - (modelOffset - lastLength));
-    }
+	// If it equals we found the position.
+	if ( modelOffset == expectedOffset ) {
+	  return this._moveViewPositionToTextNode( new ViewPosition( viewParent, viewOffset ) );
+	}
+	// If it is higher we need to enter last child.
+	else {
+	  // ( modelOffset - lastLength ) is the offset to the child we enter,
+	  // so we subtract it from the expected offset to fine the offset in the child.
+	  return this._findPositionIn( viewNode, expectedOffset - ( modelOffset - lastLength ) );
+	}
   }
 
   /**

@@ -46,7 +46,6 @@ export default class FileIconCommand extends Command {
   }
 
   _removeIcon(writer, groupRange) {
-    debugger;
     if (groupRange.start.isAtStart && groupRange.end.isAtEnd) {
       writer.unwrap(groupRange.start.parent);
 

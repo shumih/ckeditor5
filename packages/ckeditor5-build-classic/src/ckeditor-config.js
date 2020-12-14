@@ -417,21 +417,11 @@ export default {
       '.xlsx',
       '.xml',
     ],
-    uploadHandler(files, progressEvent) {
-      const total = 100;
-      let loaded = 0;
-
+    uploadHandler() {
       return new Promise(resolve => {
-        const int = setInterval(() => {
-          loaded += 20;
-          progressEvent({ total, loaded });
-        }, 900);
-
         setTimeout(() => {
-          clearInterval(int);
-
           resolve('https://ya.ru');
-        }, 5000);
+        }, 100);
       });
     },
   },
