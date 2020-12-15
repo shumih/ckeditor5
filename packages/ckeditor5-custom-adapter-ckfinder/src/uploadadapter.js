@@ -5,6 +5,7 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import FileRepository from '@ckeditor/ckeditor5-upload/src/filerepository';
+import { get } from 'lodash-es';
 
 /**
  * A plugin that write selected image inline.
@@ -49,7 +50,13 @@ export default class CKFinderCustomUploadAdapter extends Plugin {
         }
 
         if (file.type.startsWith('image')) {
-          return this._fileAsBase64(file);
+          const uploadFileFn = get(this.editor.config.get('image', 'upload.uploadFileFn'));
+
+          return typeof uploadFileFn === 'function'
+            ? uploadFileFn(file).then(href => ({
+                default: href,
+              }))
+            : this._fileAsBase64(file);
         }
       },
       abort: () => {},
