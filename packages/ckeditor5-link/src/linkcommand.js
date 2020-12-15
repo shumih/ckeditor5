@@ -11,7 +11,6 @@ import Command from '@ckeditor/ckeditor5-core/src/command';
 import findLinkRange from './findlinkrange';
 import toMap from '@ckeditor/ckeditor5-utils/src/tomap';
 import Collection from '@ckeditor/ckeditor5-utils/src/collection';
-import { getExtension } from './utils';
 
 /**
  * The link command. It is used by the {@link module:link/link~Input link feature}.
@@ -180,31 +179,25 @@ export default class LinkCommand extends Command {
           });
 
           if (fileExtension) {
-            const whitespace = this._insertIcon(fileExtension, position, writer, model);
+            const lastPosition = this._insertFileIcon(writer, model, position, fileExtension);
 
-            const text = writer.createText(href, attributes);
-            const textPosition = writer.createPositionAfter(whitespace);
-            model.insertContent(text, textPosition);
+            const { end: positionAfterAnchor } = model.insertContent(writer.createText(href, attributes), lastPosition);
 
-            const range = writer.createRange(position, textPosition);
-            writer.setSelection(range);
+            // Put the selection at the end of the inserted link.
+            // Using end of range returned from insertContent in case nodes with the same attributes got merged.
+            writer.setSelection(positionAfterAnchor);
           } else {
             const text = writer.createText(href, attributes);
 
             model.insertContent(text, position);
             writer.setSelection(writer.createRangeOn(text));
           }
-
-          // Create new range wrapping created node.
-          // writer.setSelection( writer.createRangeOn(icon) );
-          // writer.setSelection( writer.createRangeOn(text) );
-          // writer.setSelection( writer.createRange(writer.createPositionBefore(icon), writer.createPositionAfter(text)) );
         }
       } else {
         // If selection has non-collapsed ranges, we change attribute on nodes inside those ranges
         // omitting nodes where `linkHref` attribute is disallowed.
         const ranges = model.schema.getValidRanges(selection.getRanges(), 'linkHref');
-        this._insertIcon(fileExtension, position, writer, model);
+        this._insertFileIcon(writer, model, position, fileExtension);
 
         for (const range of ranges) {
           writer.setAttribute('linkHref', href, range);
@@ -233,17 +226,22 @@ export default class LinkCommand extends Command {
     return doc.selection.getAttribute(decoratorName) || false;
   }
 
-  _insertIcon(fileExtension, position, writer, model) {
+  _insertFileIcon(writer, model, position, fileExtension) {
     const { fileIcons, fileIconStyles } = this.editor.config.get('link');
-    const fileIcon = fileIcons[fileExtension] || fileIcons.default;
+    const icon = fileIcons[fileExtension];
 
-    const icon = writer.createElement('icon', toMap({ ...fileIconStyles, class: fileIcon }));
-    model.insertContent(icon, position);
+    let lastPosition = position;
+    if (icon) {
+      const { end: positionAfterIcon } = model.insertContent(
+        writer.createElement('fileIcon', { ...fileIconStyles, fileExtension }),
+        position
+      );
 
-    const whitespace = writer.createText(' ');
-    const whitespacePosition = writer.createPositionAfter(icon);
-    model.insertContent(whitespace, whitespacePosition);
+      const { end: positionAfterWhitespace } = model.insertContent(writer.createText(' '), positionAfterIcon);
 
-    return whitespace;
+      lastPosition = positionAfterWhitespace;
+    }
+
+    return lastPosition;
   }
 }

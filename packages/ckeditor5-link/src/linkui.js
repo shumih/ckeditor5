@@ -619,6 +619,12 @@ export default class LinkUI extends Plugin {
     } else {
       // The range for fully selected link is usually anchored in adjacent text nodes.
       // Trim it to get closer to the actual link element.
+      const firstRange = selection.getFirstRange();
+
+      if (!firstRange) {
+        return null;
+      }
+
       const range = selection.getFirstRange().getTrimmed();
       const startLink = findLinkElementAncestor(range.start);
       const endLink = findLinkElementAncestor(range.end);

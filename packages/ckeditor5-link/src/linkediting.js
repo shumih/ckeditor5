@@ -55,12 +55,40 @@ export default class LinkEditing extends Plugin {
   init() {
     const editor = this.editor;
     const locale = editor.locale;
+    const { fileIcons, fileIconStyles } = this.editor.config.get('link');
 
     // Allow link attribute on all inline nodes.
     editor.model.schema.extend('$text', { allowAttributes: 'linkHref' });
+    editor.model.schema.register('fileIcon', {
+      inheritAllFrom: '$text',
+      allowAttributes: [...Object.keys(fileIconStyles), 'fileExtension'],
+      isObject: true,
+			isBlock: true,
+    });
 
+    // fileExtension conversions
+    editor.conversion.elementToElement({
+      model: 'fileIcon',
+      view: 'i',
+    });
+
+    editor.conversion.attributeToAttribute({
+      view: Object.entries(fileIcons).reduce((result, [extension, className]) => {
+        result[extension] = {
+          key: 'class',
+          value: className,
+        };
+
+        return result;
+      }, {}),
+      model: {
+        key: 'fileExtension',
+        values: Object.keys(fileIcons),
+      },
+    });
+
+    // linkHref conversions
     editor.conversion.for('dataDowncast').attributeToElement({ model: 'linkHref', view: createLinkElement });
-
     editor.conversion.for('editingDowncast').attributeToElement({
       model: 'linkHref',
       view: (href, writer) => {
