@@ -81,14 +81,12 @@ export default class Text extends Node {
    * Otherwise, it acts like the `name` parameter.
    * @returns {Boolean}
    */
-  is(type) {
-    return (
-      type === 'text' ||
-      type === 'model:text' ||
-      // From super.is(). This is highly utilised method and cannot call super. See ckeditor/ckeditor5#6529.
-      type === 'node' ||
-      type === 'model:node'
-    );
+  is( type ) {
+	return type === '$text' || type === 'model:$text' ||
+	  // This are legacy values kept for backward compatibility.
+	  type === 'text' || type === 'model:text' ||
+	  // From super.is(). This is highly utilised method and cannot call super. See ckeditor/ckeditor5#6529.
+	  type === 'node' || type === 'model:node';
   }
 
   /**
