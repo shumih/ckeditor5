@@ -50,7 +50,7 @@ export default class CKFinderCustomUploadAdapter extends Plugin {
         }
 
         if (file.type.startsWith('image')) {
-          const uploadFileFn = get(this.editor.config.get('image', 'upload.uploadFileFn'));
+          const uploadFileFn = get(this.editor.config.get('image'), 'upload.uploadFileFn');
 
           return typeof uploadFileFn === 'function'
             ? uploadFileFn(file).then(href => ({
